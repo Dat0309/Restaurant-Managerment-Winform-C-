@@ -56,7 +56,7 @@
             this.nmrCount.TabIndex = 0;
             this.nmrCount.Text = "1";
             this.nmrCount.Value = ((long)(1));
-            this.nmrCount.TextChanged += new System.EventHandler(this.nmrCount_TextChanged);
+            this.nmrCount.ValueChanged += new System.EventHandler(this.nmrCount_ValueChanged);
             // 
             // lbTitle
             // 

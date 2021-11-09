@@ -16,7 +16,7 @@ namespace QuanLyDangKyHocPhan
     {
         public delegate void SendFood(Tables table,string billId);
         public delegate void ReceiveFood(Food food);
-        private string curBill;
+        private string curBill,curBillDetail;
         public Form1()
         {
             InitializeComponent();
@@ -41,11 +41,15 @@ namespace QuanLyDangKyHocPhan
             SqlConnection conn = new SqlConnection(connString);
             SqlCommand cmd = conn.CreateCommand();
 
-            cmd.CommandText = "EXECUTE BillDetail_Insert @billId,@foodId,@quantity";
+            cmd.CommandText = "EXECUTE BillDetail_Insert @id output,@billId,@foodId,@quantity";
+
+            cmd.Parameters.Add("@id", SqlDbType.Int);
 
             cmd.Parameters.Add("@billId", SqlDbType.Int);
             cmd.Parameters.Add("@foodId", SqlDbType.Int);
             cmd.Parameters.Add("@quantity", SqlDbType.Int);
+
+            cmd.Parameters["@id"].Direction = ParameterDirection.Output;
 
             cmd.Parameters["@billId"].Value = int.Parse(billId);
             cmd.Parameters["@foodId"].Value = foodId;
@@ -54,7 +58,7 @@ namespace QuanLyDangKyHocPhan
             conn.Open();
 
             cmd.ExecuteNonQuery();
-
+            curBillDetail = cmd.Parameters["@id"].Value.ToString();
             conn.Close();
         }
 
@@ -63,9 +67,9 @@ namespace QuanLyDangKyHocPhan
 
             var item = new CustomControl.OrderControl();
 
-            item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1,value.Id,int.Parse(curBill));
-            flOrder.Controls.Add(item);
             InsertBillDetail(curBill, value.Id, item.GetQuantity());
+            item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1,value.Id,int.Parse(curBill),int.Parse(curBillDetail));
+            flOrder.Controls.Add(item);
         }
         
 

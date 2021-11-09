@@ -14,8 +14,8 @@ namespace QuanLyDangKyHocPhan.CustomControl
 {
     public partial class OrderControl : UserControl
     {
-        int foodId;
-        int billId;
+        int foodId, billId, billDetailId;
+
         public OrderControl()
         {
             InitializeComponent();
@@ -34,18 +34,20 @@ namespace QuanLyDangKyHocPhan.CustomControl
                 SqlConnection conn = new SqlConnection(connString);
                 SqlCommand cmd = conn.CreateCommand();
 
-                cmd.CommandText = "EXECUTE BillDetail_Update @id,@quantity";
+                cmd.CommandText = "EXECUTE BillDetail_Update @id,@billId,@quantity";
 
                 cmd.Parameters.Add("@id", SqlDbType.Int);
+                cmd.Parameters.Add("@billId", SqlDbType.Int);
                 cmd.Parameters.Add("@quantity", SqlDbType.Int);
 
-                cmd.Parameters["@id"].Value = billId;
+                cmd.Parameters["@id"].Value = billDetailId;
+                cmd.Parameters["@billId"].Value = billId;
                 cmd.Parameters["@quantity"].Value = quantity;
 
                 conn.Open();
 
                 var numEffect = cmd.ExecuteNonQuery();
-                if(numEffect > 0)
+                if(numEffect >= 1)
                 {
                     MessageBox.Show("Update thanh cong");
                 }
@@ -61,8 +63,9 @@ namespace QuanLyDangKyHocPhan.CustomControl
             return int.Parse(nmrCount.Text);
         }
 
-        public void initUI(string title,string date, int price, int quantity, int foodId, int billId)
+        public void initUI(string title,string date, int price, int quantity, int foodId, int billId, int billDetailId)
         {
+            this.billDetailId = billDetailId;
             this.foodId = foodId;
             this.billId = billId;
             lbTitle.Text = title;
@@ -71,9 +74,9 @@ namespace QuanLyDangKyHocPhan.CustomControl
             nmrCount.Text = quantity.ToString();
         }
 
-        private void nmrCount_TextChanged(object sender, EventArgs e)
+        private void nmrCount_ValueChanged(object sender, EventArgs e)
         {
-            UpDateBillDetail(int.Parse(nmrCount.Text));
+            UpDateBillDetail(int.Parse(nmrCount.Value.ToString()));
         }
     }
 }
