@@ -16,5 +16,17 @@ namespace QuanLyDangKyHocPhan.CustomControl
         {
             InitializeComponent();
         }
+
+        private void DetailFood_Click(object sender, EventArgs e)
+        {
+            if(btnValid.Visible == false)
+            {
+                btnValid.Visible = true;
+            }
+            else
+            {
+                btnValid.Visible = false;
+            }
+        }
     }
 }

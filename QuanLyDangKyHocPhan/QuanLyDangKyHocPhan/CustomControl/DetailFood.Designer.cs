@@ -32,7 +32,7 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnValid = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel1.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,8 @@
             this.gunaShadowPanel1.Controls.Add(this.gunaLabel1);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(3, 37);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.Radius = 55;
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.Size = new System.Drawing.Size(160, 46);
             this.gunaShadowPanel1.TabIndex = 1;
             // 
@@ -82,32 +83,33 @@
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "NameFood";
             // 
-            // gunaGradientButton1
+            // btnValid
             // 
-            this.gunaGradientButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientButton1.AnimationSpeed = 0.03F;
-            this.gunaGradientButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientButton1.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradientButton1.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradientButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_plus_math_50px;
-            this.gunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaGradientButton1.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(3, 128);
-            this.gunaGradientButton1.Name = "gunaGradientButton1";
-            this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientButton1.OnHoverImage = null;
-            this.gunaGradientButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientButton1.Radius = 5;
-            this.gunaGradientButton1.Size = new System.Drawing.Size(45, 42);
-            this.gunaGradientButton1.TabIndex = 2;
+            this.btnValid.AnimationHoverSpeed = 0.07F;
+            this.btnValid.AnimationSpeed = 0.03F;
+            this.btnValid.BackColor = System.Drawing.Color.Transparent;
+            this.btnValid.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnValid.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.btnValid.BorderColor = System.Drawing.Color.Black;
+            this.btnValid.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnValid.FocusedColor = System.Drawing.Color.Empty;
+            this.btnValid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnValid.ForeColor = System.Drawing.Color.White;
+            this.btnValid.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_plus_math_50px;
+            this.btnValid.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnValid.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnValid.Location = new System.Drawing.Point(3, 128);
+            this.btnValid.Name = "btnValid";
+            this.btnValid.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnValid.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.btnValid.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnValid.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnValid.OnHoverImage = null;
+            this.btnValid.OnPressedColor = System.Drawing.Color.Black;
+            this.btnValid.Radius = 5;
+            this.btnValid.Size = new System.Drawing.Size(45, 42);
+            this.btnValid.TabIndex = 2;
+            this.btnValid.Visible = false;
             // 
             // DetailFood
             // 
@@ -115,12 +117,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyDangKyHocPhan.Properties.Resources.humberger;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Controls.Add(this.gunaGradientButton1);
+            this.Controls.Add(this.btnValid);
             this.Controls.Add(this.gunaShadowPanel1);
             this.Controls.Add(this.gunaGradient2Panel1);
             this.DoubleBuffered = true;
             this.Name = "DetailFood";
             this.Size = new System.Drawing.Size(165, 173);
+            this.Click += new System.EventHandler(this.DetailFood_Click);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
             this.gunaShadowPanel1.ResumeLayout(false);
@@ -135,6 +138,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaGradientButton gunaGradientButton1;
+        private Guna.UI.WinForms.GunaGradientButton btnValid;
     }
 }

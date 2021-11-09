@@ -73,16 +73,35 @@
     <Compile Include="CustomControl\DetailFood.Designer.cs">
       <DependentUpon>DetailFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControl\OrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\OrderControl.Designer.cs">
+      <DependentUpon>OrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\TableControll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\TableControll.Designer.cs">
+      <DependentUpon>TableControll.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Tables.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CustomControl\DetailFood.resx">
       <DependentUpon>DetailFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\OrderControl.resx">
+      <DependentUpon>OrderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\TableControll.resx">
+      <DependentUpon>TableControll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -111,10 +130,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_dinner_50px_1.png" />
   </ItemGroup>
@@ -162,6 +178,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_plus_math_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trash_can_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSC07474.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Generic-Restaurant-Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_no_crustaceans_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_coffee_table_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_coffee_table_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_receipt_terminal_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_receipt_terminal_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_check_file_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_dollar_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\woodcroft-bleached-pine-rectangular-dining-table-tn7225-4f_1511.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

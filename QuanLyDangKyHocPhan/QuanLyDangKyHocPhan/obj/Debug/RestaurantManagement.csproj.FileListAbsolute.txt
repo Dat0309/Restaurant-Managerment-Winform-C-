@@ -14,3 +14,5 @@ E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPha
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.exe
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.pdb
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.CustomControl.DetailFood.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.CustomControl.OrderControl.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.CustomControl.TableControll.resources
