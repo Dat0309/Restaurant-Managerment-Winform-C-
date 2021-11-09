@@ -31,7 +31,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             }
             else
             {
-                btnValid.Visible = false;
+                this.Enabled = true;
             }
         }
 

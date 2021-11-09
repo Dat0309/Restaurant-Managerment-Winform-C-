@@ -28,5 +28,12 @@ namespace QuanLyDangKyHocPhan.CustomControl
                 btnValid.Visible = false;
             }
         }
+
+        public void LoadFood(string name, int price, string img)
+        {
+            lbNameFood.Text = name;
+            lbPrice.Text = price.ToString();
+            this.BackgroundImage = Image.FromFile(img);
+        }
     }
 }

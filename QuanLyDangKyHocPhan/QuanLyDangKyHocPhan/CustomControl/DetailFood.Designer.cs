@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.lbPrice = new Guna.UI.WinForms.GunaLabel();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lbNameFood = new Guna.UI.WinForms.GunaLabel();
             this.btnValid = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel1.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
@@ -40,7 +40,7 @@
             // gunaGradient2Panel1
             // 
             this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel1.Controls.Add(this.gunaLabel2);
+            this.gunaGradient2Panel1.Controls.Add(this.lbPrice);
             this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.gunaGradient2Panel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -50,38 +50,38 @@
             this.gunaGradient2Panel1.Size = new System.Drawing.Size(94, 23);
             this.gunaGradient2Panel1.TabIndex = 0;
             // 
-            // gunaLabel2
+            // lbPrice
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(24, 0);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(42, 20);
-            this.gunaLabel2.TabIndex = 0;
-            this.gunaLabel2.Text = "price";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbPrice.ForeColor = System.Drawing.Color.White;
+            this.lbPrice.Location = new System.Drawing.Point(24, 0);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(42, 20);
+            this.lbPrice.TabIndex = 0;
+            this.lbPrice.Text = "price";
             // 
             // gunaShadowPanel1
             // 
-            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.White;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gunaShadowPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaShadowPanel1.Controls.Add(this.lbNameFood);
             this.gunaShadowPanel1.Location = new System.Drawing.Point(3, 37);
             this.gunaShadowPanel1.Name = "gunaShadowPanel1";
             this.gunaShadowPanel1.Radius = 55;
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(160, 46);
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.White;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(207, 46);
             this.gunaShadowPanel1.TabIndex = 1;
             // 
-            // gunaLabel1
+            // lbNameFood
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(33, 13);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(83, 20);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "NameFood";
+            this.lbNameFood.AutoSize = true;
+            this.lbNameFood.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameFood.Location = new System.Drawing.Point(11, 14);
+            this.lbNameFood.Name = "lbNameFood";
+            this.lbNameFood.Size = new System.Drawing.Size(86, 20);
+            this.lbNameFood.TabIndex = 0;
+            this.lbNameFood.Text = "NameFood";
             // 
             // btnValid
             // 
@@ -98,7 +98,7 @@
             this.btnValid.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_plus_math_50px;
             this.btnValid.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnValid.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnValid.Location = new System.Drawing.Point(3, 128);
+            this.btnValid.Location = new System.Drawing.Point(3, 174);
             this.btnValid.Name = "btnValid";
             this.btnValid.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnValid.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
@@ -122,7 +122,7 @@
             this.Controls.Add(this.gunaGradient2Panel1);
             this.DoubleBuffered = true;
             this.Name = "DetailFood";
-            this.Size = new System.Drawing.Size(165, 173);
+            this.Size = new System.Drawing.Size(213, 219);
             this.Click += new System.EventHandler(this.DetailFood_Click);
             this.gunaGradient2Panel1.ResumeLayout(false);
             this.gunaGradient2Panel1.PerformLayout();
@@ -135,9 +135,9 @@
         #endregion
 
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaLabel lbPrice;
         private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lbNameFood;
         private Guna.UI.WinForms.GunaGradientButton btnValid;
     }
 }
