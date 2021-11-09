@@ -54,8 +54,9 @@
             this.nmrCount.Radius = 5;
             this.nmrCount.Size = new System.Drawing.Size(75, 30);
             this.nmrCount.TabIndex = 0;
-            this.nmrCount.Text = "gunaNumeric1";
-            this.nmrCount.Value = ((long)(0));
+            this.nmrCount.Text = "1";
+            this.nmrCount.Value = ((long)(1));
+            this.nmrCount.TextChanged += new System.EventHandler(this.nmrCount_TextChanged);
             // 
             // lbTitle
             // 

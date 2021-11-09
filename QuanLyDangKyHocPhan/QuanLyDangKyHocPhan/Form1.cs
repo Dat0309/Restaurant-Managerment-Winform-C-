@@ -16,6 +16,7 @@ namespace QuanLyDangKyHocPhan
     {
         public delegate void SendFood(Tables table,string billId);
         public delegate void ReceiveFood(Food food);
+        private string curBill;
         public Form1()
         {
             InitializeComponent();
@@ -31,11 +32,30 @@ namespace QuanLyDangKyHocPhan
         private void SetValue(Tables value,string billId)
         {
             this.lbNameTable.Text = "Bàn " + value.name;
-            MessageBox.Show("Successfully adding new bill. Bill ID = " + billId, "Message");
+            curBill = billId;
         }
 
-        private void UpDateBillDetail(int price)
+        private void InsertBillDetail(string billId, int foodId, int quantity)
         {
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "EXECUTE BillDetail_Insert @billId,@foodId,@quantity";
+
+            cmd.Parameters.Add("@billId", SqlDbType.Int);
+            cmd.Parameters.Add("@foodId", SqlDbType.Int);
+            cmd.Parameters.Add("@quantity", SqlDbType.Int);
+
+            cmd.Parameters["@billId"].Value = int.Parse(billId);
+            cmd.Parameters["@foodId"].Value = foodId;
+            cmd.Parameters["@quantity"].Value=quantity;
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
 
         private void SetFood(Food value)
@@ -43,8 +63,9 @@ namespace QuanLyDangKyHocPhan
 
             var item = new CustomControl.OrderControl();
 
-            item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1);
+            item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1,value.Id,int.Parse(curBill));
             flOrder.Controls.Add(item);
+            InsertBillDetail(curBill, value.Id, item.GetQuantity());
         }
         
 
