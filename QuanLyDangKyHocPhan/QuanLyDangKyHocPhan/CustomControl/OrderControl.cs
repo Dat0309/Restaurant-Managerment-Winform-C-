@@ -21,5 +21,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
         {
 
         }
+
+        public void initUI(string title,string date, int price, int quantity)
+        {
+            lbTitle.Text = title;
+            lbDate.Text = date;
+            lbPrice.Text = (price*quantity).ToString();
+            nmrCount.Text = quantity.ToString();
+        }
     }
 }

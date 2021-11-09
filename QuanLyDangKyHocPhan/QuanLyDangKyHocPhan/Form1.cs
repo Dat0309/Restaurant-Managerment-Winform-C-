@@ -14,7 +14,8 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class Form1 : Form
     {
-        public delegate void SendFood(Tables table);
+        public delegate void SendFood(Tables table,string billId);
+        public delegate void ReceiveFood(Food food);
         public Form1()
         {
             InitializeComponent();
@@ -27,10 +28,25 @@ namespace QuanLyDangKyHocPhan
 
         #region cac ham xu ly
 
-        private void SetValue(Tables value)
+        private void SetValue(Tables value,string billId)
         {
             this.lbNameTable.Text = "Bàn " + value.name;
+            MessageBox.Show("Successfully adding new bill. Bill ID = " + billId, "Message");
         }
+
+        private void UpDateBillDetail(int price)
+        {
+        }
+
+        private void SetFood(Food value)
+        {
+
+            var item = new CustomControl.OrderControl();
+
+            item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1);
+            flOrder.Controls.Add(item);
+        }
+        
 
         #endregion
 
@@ -76,11 +92,12 @@ namespace QuanLyDangKyHocPhan
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                foods.Add(new Food((int)reader["ID"], (string)reader["Name"], (string)reader["Unit"], (int)reader["FoodCategoryID"],
-                    (int)reader["Price"], (string)reader["Notes"], (string)reader["Picture"]));
+                var food = new Food((int)reader["ID"], (string)reader["Name"], (string)reader["Unit"], (int)reader["FoodCategoryID"],
+                    (int)reader["Price"], (string)reader["Notes"], (string)reader["Picture"]);
+                foods.Add(food);
 
-                var item = new CustomControl.DetailFood();
-                item.LoadFood((string)reader["Name"],(int)reader["Price"],(string)reader["Picture"]);
+                var item = new CustomControl.DetailFood(SetFood);
+                item.LoadFood((string)reader["Name"],(int)reader["Price"],(string)reader["Picture"],food);
 
                 flpFoodList.Controls.Add(item);
             }

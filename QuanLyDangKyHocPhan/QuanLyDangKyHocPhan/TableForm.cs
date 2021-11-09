@@ -14,7 +14,7 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class TableForm : Form
     {
-        public delegate void Load(Tables food);
+        public delegate void Load(Tables food,string billId);
 
         public Tables curTable;
         public SendFood send;
@@ -30,10 +30,10 @@ namespace QuanLyDangKyHocPhan
             this.send = sender;
         }
 
-        private void SetValue(Tables value)
+        private void SetValue(Tables value, string billId)
         {
             this.curTable = value;
-            this.send(curTable);
+            this.send(curTable,billId);
             this.Close();
         }
 
