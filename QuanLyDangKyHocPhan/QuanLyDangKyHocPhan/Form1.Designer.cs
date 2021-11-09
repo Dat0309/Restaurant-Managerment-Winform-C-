@@ -37,20 +37,12 @@ namespace QuanLyDangKyHocPhan
             this.flpFoodList = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradient2Panel2 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.btnTable = new System.Windows.Forms.Button();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.lbNameTable = new Guna.UI.WinForms.GunaLabel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaGradientTileButton6 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaGradientTileButton5 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.btnAccount = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.btnBills = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnFood = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.btnListTable = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.gunaGradient2Panel3 = new Guna.UI.WinForms.GunaGradient2Panel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
@@ -63,16 +55,24 @@ namespace QuanLyDangKyHocPhan
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.btnSave = new Guna.UI.WinForms.GunaGradientButton();
             this.btnPay = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaGradientTileButton6 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaGradientTileButton5 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.btnAccount = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.btnBills = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.btnFood = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.btnListTable = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.orderControl1 = new QuanLyDangKyHocPhan.CustomControl.OrderControl();
             this.gunaGradient2Panel2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
             this.gunaGradient2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.gunaPanel2.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaDragControl1
@@ -138,7 +138,7 @@ namespace QuanLyDangKyHocPhan
             // 
             this.gunaGradient2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel2.Controls.Add(this.btnTable);
-            this.gunaGradient2Panel2.Controls.Add(this.gunaLabel3);
+            this.gunaGradient2Panel2.Controls.Add(this.lbNameTable);
             this.gunaGradient2Panel2.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.gunaGradient2Panel2.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.gunaGradient2Panel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
@@ -158,16 +158,16 @@ namespace QuanLyDangKyHocPhan
             this.btnTable.UseVisualStyleBackColor = true;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
-            // gunaLabel3
+            // lbNameTable
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(16, 13);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(130, 32);
-            this.gunaLabel3.TabIndex = 0;
-            this.gunaLabel3.Text = "New Order";
+            this.lbNameTable.AutoSize = true;
+            this.lbNameTable.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.lbNameTable.ForeColor = System.Drawing.Color.White;
+            this.lbNameTable.Location = new System.Drawing.Point(16, 13);
+            this.lbNameTable.Name = "lbNameTable";
+            this.lbNameTable.Size = new System.Drawing.Size(130, 32);
+            this.lbNameTable.TabIndex = 0;
+            this.lbNameTable.Text = "New Order";
             // 
             // flowLayoutPanel2
             // 
@@ -192,6 +192,208 @@ namespace QuanLyDangKyHocPhan
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(212, 753);
             this.gunaPanel1.TabIndex = 0;
+            // 
+            // gunaShadowPanel1
+            // 
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel1.Controls.Add(this.gunaGradient2Panel3);
+            this.gunaShadowPanel1.Controls.Add(this.gunaLabel2);
+            this.gunaShadowPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(218, 35);
+            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
+            this.gunaShadowPanel1.Radius = 5;
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(1173, 104);
+            this.gunaShadowPanel1.TabIndex = 5;
+            // 
+            // gunaGradient2Panel3
+            // 
+            this.gunaGradient2Panel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel3.Controls.Add(this.gunaLabel4);
+            this.gunaGradient2Panel3.Controls.Add(this.gunaCirclePictureBox1);
+            this.gunaGradient2Panel3.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.gunaGradient2Panel3.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.gunaGradient2Panel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradient2Panel3.Location = new System.Drawing.Point(972, 21);
+            this.gunaGradient2Panel3.Name = "gunaGradient2Panel3";
+            this.gunaGradient2Panel3.Radius = 6;
+            this.gunaGradient2Panel3.Size = new System.Drawing.Size(167, 62);
+            this.gunaGradient2Panel3.TabIndex = 8;
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel4.Location = new System.Drawing.Point(64, 19);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(89, 20);
+            this.gunaLabel4.TabIndex = 1;
+            this.gunaLabel4.Text = "Nhân viên A";
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.gunaLabel2.Location = new System.Drawing.Point(17, 49);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(141, 23);
+            this.gunaLabel2.TabIndex = 1;
+            this.gunaLabel2.Text = "Phục vụ tận răng";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.gunaLabel1.Location = new System.Drawing.Point(15, 14);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(241, 35);
+            this.gunaLabel1.TabIndex = 0;
+            this.gunaLabel1.Text = "Nhà hàng Trọng Đạt";
+            // 
+            // gunaPanel2
+            // 
+            this.gunaPanel2.Controls.Add(this.gunaLinePanel1);
+            this.gunaPanel2.Location = new System.Drawing.Point(854, 433);
+            this.gunaPanel2.Name = "gunaPanel2";
+            this.gunaPanel2.Size = new System.Drawing.Size(503, 246);
+            this.gunaPanel2.TabIndex = 13;
+            // 
+            // gunaLinePanel1
+            // 
+            this.gunaLinePanel1.Controls.Add(this.gunaLabel9);
+            this.gunaLinePanel1.Controls.Add(this.gunaLabel8);
+            this.gunaLinePanel1.Controls.Add(this.gunaLabel7);
+            this.gunaLinePanel1.Controls.Add(this.gunaLabel6);
+            this.gunaLinePanel1.Controls.Add(this.gunaSeparator1);
+            this.gunaLinePanel1.Controls.Add(this.gunaLabel5);
+            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaLinePanel1.LineBottom = 1;
+            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
+            this.gunaLinePanel1.LineLeft = 1;
+            this.gunaLinePanel1.LineRight = 1;
+            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
+            this.gunaLinePanel1.LineTop = 1;
+            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaLinePanel1.Name = "gunaLinePanel1";
+            this.gunaLinePanel1.Size = new System.Drawing.Size(503, 246);
+            this.gunaLinePanel1.TabIndex = 0;
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel9.Location = new System.Drawing.Point(3, 168);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(100, 23);
+            this.gunaLabel9.TabIndex = 5;
+            this.gunaLabel9.Text = "Thành tiền:";
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel8.Location = new System.Drawing.Point(16, 109);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(67, 20);
+            this.gunaLabel8.TabIndex = 4;
+            this.gunaLabel8.Text = "Discount";
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel7.Location = new System.Drawing.Point(16, 78);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(41, 20);
+            this.gunaLabel7.TabIndex = 3;
+            this.gunaLabel7.Text = "Thuế";
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel6.Location = new System.Drawing.Point(16, 47);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(91, 20);
+            this.gunaLabel6.TabIndex = 2;
+            this.gunaLabel6.Text = "Tổng số tiền";
+            // 
+            // gunaSeparator1
+            // 
+            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.gunaSeparator1.Location = new System.Drawing.Point(119, 176);
+            this.gunaSeparator1.Name = "gunaSeparator1";
+            this.gunaSeparator1.Size = new System.Drawing.Size(382, 10);
+            this.gunaSeparator1.TabIndex = 1;
+            this.gunaSeparator1.Thickness = 5;
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(13, 10);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(63, 20);
+            this.gunaLabel5.TabIndex = 0;
+            this.gunaLabel5.Text = "Chi tiết:";
+            // 
+            // btnSave
+            // 
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnSave.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btnSave.BorderColor = System.Drawing.Color.Black;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_check_file_50px_1;
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.Location = new System.Drawing.Point(1031, 686);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnSave.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = null;
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 5;
+            this.btnSave.Size = new System.Drawing.Size(160, 53);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Lưu hoá đơn";
+            // 
+            // btnPay
+            // 
+            this.btnPay.AnimationHoverSpeed = 0.07F;
+            this.btnPay.AnimationSpeed = 0.03F;
+            this.btnPay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPay.BaseColor1 = System.Drawing.Color.Green;
+            this.btnPay.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPay.BorderColor = System.Drawing.Color.Black;
+            this.btnPay.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPay.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
+            this.btnPay.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPay.Location = new System.Drawing.Point(1197, 686);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.btnPay.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPay.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPay.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPay.OnHoverImage = null;
+            this.btnPay.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPay.Radius = 5;
+            this.btnPay.Size = new System.Drawing.Size(160, 53);
+            this.btnPay.TabIndex = 10;
+            this.btnPay.Text = "Thanh toán";
             // 
             // gunaGradientTileButton6
             // 
@@ -374,46 +576,6 @@ namespace QuanLyDangKyHocPhan
             this.btnListTable.Text = "Danh sách bàn";
             this.btnListTable.Click += new System.EventHandler(this.btnListTable_Click);
             // 
-            // gunaShadowPanel1
-            // 
-            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel1.Controls.Add(this.gunaGradient2Panel3);
-            this.gunaShadowPanel1.Controls.Add(this.gunaLabel2);
-            this.gunaShadowPanel1.Controls.Add(this.gunaLabel1);
-            this.gunaShadowPanel1.Location = new System.Drawing.Point(218, 35);
-            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
-            this.gunaShadowPanel1.Radius = 5;
-            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(1173, 104);
-            this.gunaShadowPanel1.TabIndex = 5;
-            // 
-            // gunaGradient2Panel3
-            // 
-            this.gunaGradient2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradient2Panel3.Controls.Add(this.gunaLabel4);
-            this.gunaGradient2Panel3.Controls.Add(this.gunaCirclePictureBox1);
-            this.gunaGradient2Panel3.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradient2Panel3.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradient2Panel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradient2Panel3.Location = new System.Drawing.Point(972, 21);
-            this.gunaGradient2Panel3.Name = "gunaGradient2Panel3";
-            this.gunaGradient2Panel3.Radius = 6;
-            this.gunaGradient2Panel3.Size = new System.Drawing.Size(167, 62);
-            this.gunaGradient2Panel3.TabIndex = 8;
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel4.Location = new System.Drawing.Point(64, 19);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(89, 20);
-            this.gunaLabel4.TabIndex = 1;
-            this.gunaLabel4.Text = "Nhân viên A";
-            // 
             // gunaCirclePictureBox1
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
@@ -425,168 +587,6 @@ namespace QuanLyDangKyHocPhan
             this.gunaCirclePictureBox1.TabIndex = 0;
             this.gunaCirclePictureBox1.TabStop = false;
             this.gunaCirclePictureBox1.UseTransfarantBackground = false;
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.gunaLabel2.Location = new System.Drawing.Point(17, 49);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(141, 23);
-            this.gunaLabel2.TabIndex = 1;
-            this.gunaLabel2.Text = "Phục vụ tận răng";
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.gunaLabel1.Location = new System.Drawing.Point(15, 14);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(241, 35);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Nhà hàng Trọng Đạt";
-            // 
-            // gunaPanel2
-            // 
-            this.gunaPanel2.Controls.Add(this.gunaLinePanel1);
-            this.gunaPanel2.Location = new System.Drawing.Point(854, 433);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(503, 246);
-            this.gunaPanel2.TabIndex = 13;
-            // 
-            // gunaLinePanel1
-            // 
-            this.gunaLinePanel1.Controls.Add(this.gunaLabel9);
-            this.gunaLinePanel1.Controls.Add(this.gunaLabel8);
-            this.gunaLinePanel1.Controls.Add(this.gunaLabel7);
-            this.gunaLinePanel1.Controls.Add(this.gunaLabel6);
-            this.gunaLinePanel1.Controls.Add(this.gunaSeparator1);
-            this.gunaLinePanel1.Controls.Add(this.gunaLabel5);
-            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaLinePanel1.LineBottom = 1;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel1.LineLeft = 1;
-            this.gunaLinePanel1.LineRight = 1;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.LineTop = 1;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(503, 246);
-            this.gunaLinePanel1.TabIndex = 0;
-            // 
-            // gunaLabel9
-            // 
-            this.gunaLabel9.AutoSize = true;
-            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel9.Location = new System.Drawing.Point(3, 168);
-            this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(100, 23);
-            this.gunaLabel9.TabIndex = 5;
-            this.gunaLabel9.Text = "Thành tiền:";
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.AutoSize = true;
-            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel8.Location = new System.Drawing.Point(16, 109);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(67, 20);
-            this.gunaLabel8.TabIndex = 4;
-            this.gunaLabel8.Text = "Discount";
-            // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel7.Location = new System.Drawing.Point(16, 78);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(41, 20);
-            this.gunaLabel7.TabIndex = 3;
-            this.gunaLabel7.Text = "Thuế";
-            // 
-            // gunaLabel6
-            // 
-            this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(16, 47);
-            this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(91, 20);
-            this.gunaLabel6.TabIndex = 2;
-            this.gunaLabel6.Text = "Tổng số tiền";
-            // 
-            // gunaSeparator1
-            // 
-            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.gunaSeparator1.Location = new System.Drawing.Point(119, 176);
-            this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(382, 10);
-            this.gunaSeparator1.TabIndex = 1;
-            this.gunaSeparator1.Thickness = 5;
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(13, 10);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(63, 20);
-            this.gunaLabel5.TabIndex = 0;
-            this.gunaLabel5.Text = "Chi tiết:";
-            // 
-            // btnSave
-            // 
-            this.btnSave.AnimationHoverSpeed = 0.07F;
-            this.btnSave.AnimationSpeed = 0.03F;
-            this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.btnSave.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnSave.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_check_file_50px_1;
-            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(1031, 686);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.btnSave.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSave.OnHoverImage = null;
-            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSave.Radius = 5;
-            this.btnSave.Size = new System.Drawing.Size(160, 53);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Lưu hoá đơn";
-            // 
-            // btnPay
-            // 
-            this.btnPay.AnimationHoverSpeed = 0.07F;
-            this.btnPay.AnimationSpeed = 0.03F;
-            this.btnPay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPay.BaseColor1 = System.Drawing.Color.Green;
-            this.btnPay.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPay.BorderColor = System.Drawing.Color.Black;
-            this.btnPay.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPay.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
-            this.btnPay.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPay.Location = new System.Drawing.Point(1197, 686);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.OnHoverBaseColor1 = System.Drawing.Color.Green;
-            this.btnPay.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPay.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPay.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPay.OnHoverImage = null;
-            this.btnPay.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPay.Radius = 5;
-            this.btnPay.Size = new System.Drawing.Size(160, 53);
-            this.btnPay.TabIndex = 10;
-            this.btnPay.Text = "Thanh toán";
             // 
             // orderControl1
             // 
@@ -616,15 +616,15 @@ namespace QuanLyDangKyHocPhan
             this.gunaGradient2Panel2.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaShadowPanel1.ResumeLayout(false);
             this.gunaShadowPanel1.PerformLayout();
             this.gunaGradient2Panel3.ResumeLayout(false);
             this.gunaGradient2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -642,7 +642,7 @@ namespace QuanLyDangKyHocPhan
         private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private CustomControl.OrderControl orderControl1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel lbNameTable;
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private System.Windows.Forms.Button btnTable;

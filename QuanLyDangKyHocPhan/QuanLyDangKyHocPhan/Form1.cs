@@ -14,6 +14,7 @@ namespace QuanLyDangKyHocPhan
 {
     public partial class Form1 : Form
     {
+        public delegate void SendFood(Tables table);
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,15 @@ namespace QuanLyDangKyHocPhan
         {
 
         }
+
+        #region cac ham xu ly
+
+        private void SetValue(Tables value)
+        {
+            this.lbNameTable.Text = "Bàn " + value.name;
+        }
+
+        #endregion
 
         private void btnListTable_Click(object sender, EventArgs e)
         {
@@ -38,10 +48,11 @@ namespace QuanLyDangKyHocPhan
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                tables.Add(new Tables((int)reader["ID"], (string)reader["Name"], (int)reader["Status"], (int)reader["Capacity"]));
+                var table = new Tables((int)reader["ID"], (string)reader["Name"], (int)reader["Status"], (int)reader["Capacity"]);
+                tables.Add(table);
 
                 var item = new CustomControl.TableControll();
-                item.LoadTableName((string)reader["Name"]);
+                item.LoadTableName((string)reader["Name"],table);
                 item.LoadStatus((int)reader["Status"]);
 
                 flpFoodList.Controls.Add(item);
@@ -96,9 +107,15 @@ namespace QuanLyDangKyHocPhan
 
             conn.Close();
 
-            TableForm frm = new TableForm();
+            TableForm frm = new TableForm(SetValue);
             frm.initUI(tables);
             frm.ShowDialog(this);
+            frm.FormClosed += new FormClosedEventHandler(frmClosed);
+        }
+
+        private void frmClosed(object sender, FormClosedEventArgs e)
+        {
+            btnListTable_Click(sender, e);
         }
     }
 }
