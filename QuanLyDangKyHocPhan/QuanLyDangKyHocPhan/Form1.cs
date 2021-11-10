@@ -70,9 +70,40 @@ namespace QuanLyDangKyHocPhan
             InsertBillDetail(curBill, value.Id, item.GetQuantity());
             item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1,value.Id,int.Parse(curBill),int.Parse(curBillDetail));
             flOrder.Controls.Add(item);
+            LoadAmount();
         }
         
+        private void LoadAmount()
+        {
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
 
+            cmd.CommandText = "EXECUTE Amount_Update @id";
+            
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+
+            cmd.Parameters["@id"].Value = curBill;
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = $"Select * from Bills where ID = {curBill}";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                lbSumPrice.Text = (reader["Amount"]).ToString();
+                txtDiscount.Text = (reader["Discount"]).ToString();
+                txtTax.Text = (reader["Tax"]).ToString();
+
+                int discount = int.Parse(lbSumPrice.Text) * int.Parse(txtDiscount.Text);
+                int tax = int.Parse(lbSumPrice.Text) * int.Parse(txtTax.Text);
+
+                txtAmount.Text = (int.Parse(lbSumPrice.Text) - discount - tax).ToString();            
+            }
+
+            conn.Close();
+
+        }
         #endregion
 
         private void btnListTable_Click(object sender, EventArgs e)

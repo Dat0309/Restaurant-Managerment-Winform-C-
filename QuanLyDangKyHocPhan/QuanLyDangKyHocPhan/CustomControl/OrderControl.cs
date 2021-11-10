@@ -47,10 +47,6 @@ namespace QuanLyDangKyHocPhan.CustomControl
                 conn.Open();
 
                 var numEffect = cmd.ExecuteNonQuery();
-                if(numEffect >= 1)
-                {
-                    MessageBox.Show("Update thanh cong");
-                }
                 conn.Close();
             }catch (Exception ex)
             {
