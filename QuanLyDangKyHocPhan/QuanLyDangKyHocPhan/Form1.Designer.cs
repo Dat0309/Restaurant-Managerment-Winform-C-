@@ -130,14 +130,19 @@ namespace QuanLyDangKyHocPhan
             // 
             // flpFoodList
             // 
+            this.flpFoodList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpFoodList.AutoScroll = true;
             this.flpFoodList.Location = new System.Drawing.Point(218, 145);
             this.flpFoodList.Name = "flpFoodList";
-            this.flpFoodList.Size = new System.Drawing.Size(630, 594);
+            this.flpFoodList.Size = new System.Drawing.Size(596, 594);
             this.flpFoodList.TabIndex = 6;
             // 
             // gunaGradient2Panel2
             // 
+            this.gunaGradient2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaGradient2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel2.Controls.Add(this.btnTable);
             this.gunaGradient2Panel2.Controls.Add(this.lbNameTable);
@@ -173,6 +178,8 @@ namespace QuanLyDangKyHocPhan
             // 
             // flOrder
             // 
+            this.flOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flOrder.AutoScroll = true;
             this.flOrder.Location = new System.Drawing.Point(854, 242);
             this.flOrder.Name = "flOrder";
@@ -377,6 +384,8 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaShadowPanel1
             // 
+            this.gunaShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaShadowPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
@@ -458,6 +467,8 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaLinePanel1
             // 
+            this.gunaLinePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLinePanel1.Controls.Add(this.txtAmount);
             this.gunaLinePanel1.Controls.Add(this.txtDiscount);
             this.gunaLinePanel1.Controls.Add(this.txtTax);
@@ -468,7 +479,6 @@ namespace QuanLyDangKyHocPhan
             this.gunaLinePanel1.Controls.Add(this.gunaLabel6);
             this.gunaLinePanel1.Controls.Add(this.gunaSeparator1);
             this.gunaLinePanel1.Controls.Add(this.gunaLabel5);
-            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLinePanel1.LineBottom = 1;
             this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
             this.gunaLinePanel1.LineLeft = 1;
@@ -600,6 +610,7 @@ namespace QuanLyDangKyHocPhan
             // 
             // btnPay
             // 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPay.AnimationHoverSpeed = 0.07F;
             this.btnPay.AnimationSpeed = 0.03F;
             this.btnPay.BackColor = System.Drawing.Color.Transparent;
@@ -628,6 +639,7 @@ namespace QuanLyDangKyHocPhan
             // 
             // btnXuatHoaDon
             // 
+            this.btnXuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXuatHoaDon.AnimationHoverSpeed = 0.07F;
             this.btnXuatHoaDon.AnimationSpeed = 0.03F;
             this.btnXuatHoaDon.BackColor = System.Drawing.Color.Transparent;

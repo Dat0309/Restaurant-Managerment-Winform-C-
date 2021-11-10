@@ -100,24 +100,41 @@ namespace QuanLyDangKyHocPhan.CustomControl
         {
             if (btnValid.Visible == false)
             {
-                UpdateStatusTable(1);
-                InsertBillsTable();
-                btnValid.Visible = true;
-                this.send(this.table,billID);
+                try
+                {
+                    UpdateStatusTable(1);
+                    InsertBillsTable();
+                    btnValid.Visible = true;
+                    this.send(this.table, billID);
+                }catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "SqlError");
+                }
+                
             }
             else
             {
-                BillForm billForm = new BillForm();
-                billForm.LoadBills(table.id);
-                billForm.ShowDialog(this);
-                billForm.FormClosed += new FormClosedEventHandler(frmClosed);
+                try
+                {
+                    BillForm billForm = new BillForm();
+                    billForm.LoadBills(table.id);
+                    //billForm.FormClosing += new FormClosingEventHandler(frmClosed);
+                    if(billForm.ShowDialog(this) == DialogResult.OK)
+                    {
+                        LoadStatus(0);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "SqlError");
+                }
             }
         }
 
-        private void frmClosed(object sender, FormClosedEventArgs e)
-        {
-            LoadStatus(0);
-        }
+        //private void frmClosed(object sender, FormClosingEventArgs e)
+        //{
+        //    LoadStatus(0);
+        //}
 
         public void LoadTableName(string tableName, Tables currentTable)
         {

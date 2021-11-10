@@ -105,6 +105,7 @@ namespace QuanLyDangKyHocPhan
 
                 MessageBox.Show("Thanh toán thành công");
                 this.LoadBills(tableId);
+                DialogResult = DialogResult.OK;
             }
         }
     }

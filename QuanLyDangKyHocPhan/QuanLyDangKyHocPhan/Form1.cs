@@ -224,6 +224,7 @@ namespace QuanLyDangKyHocPhan
         //Chose table
         private void btnTable_Click(object sender, EventArgs e)
         {
+            ResetForm();
             List<Tables> tables = new List<Tables>();
             string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection conn = new SqlConnection(connString);
@@ -242,9 +243,8 @@ namespace QuanLyDangKyHocPhan
             conn.Close();
 
             TableForm frm = new TableForm(SetValue);
-            frm.initUI(tables);
-            frm.ShowDialog(this);
-            if (DialogResult == DialogResult.OK)
+            frm.initUI(tables);  
+            if (frm.ShowDialog(this) == DialogResult.OK)
             {
                 btnListTable_Click(sender, e);
             }
