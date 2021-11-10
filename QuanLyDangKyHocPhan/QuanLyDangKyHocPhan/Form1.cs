@@ -17,6 +17,7 @@ namespace QuanLyDangKyHocPhan
         public delegate void SendFood(Tables table,string billId);
         public delegate void ReceiveFood(Food food);
         private string curBill,curBillDetail;
+        private Tables curTable;
         public Form1()
         {
             InitializeComponent();
@@ -29,12 +30,15 @@ namespace QuanLyDangKyHocPhan
 
         #region cac ham xu ly
 
+        // Click in table user control
         private void SetValue(Tables value,string billId)
         {
             this.lbNameTable.Text = "Bàn " + value.name;
-            curBill = billId;
+            this.curBill = billId;
+            this.curTable = value;
         }
 
+        //Create billDetail
         private void InsertBillDetail(string billId, int foodId, int quantity)
         {
             string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
@@ -62,6 +66,7 @@ namespace QuanLyDangKyHocPhan
             conn.Close();
         }
 
+        // click in food control
         private void SetFood(Food value)
         {
 
@@ -70,9 +75,51 @@ namespace QuanLyDangKyHocPhan
             InsertBillDetail(curBill, value.Id, item.GetQuantity());
             item.initUI(value.Name, DateTime.Now.ToShortDateString(), value.Price, 1,value.Id,int.Parse(curBill),int.Parse(curBillDetail));
             flOrder.Controls.Add(item);
-            LoadAmount();
         }
-        
+
+        // Update status table
+        private void UpdateStatusTable(int status)
+        {
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "EXECUTE TableStatus_Update @id,@status";
+
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters.Add("@status", SqlDbType.Int);
+
+            cmd.Parameters["@id"].Value = curTable.id;
+            cmd.Parameters["@status"].Value = status;
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        //Update status Bills
+        private void UpdateStatusBill(bool status)
+        {
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "EXECUTE BillsStatus_Update @id,@status";
+
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters.Add("@status", SqlDbType.Bit);
+
+            cmd.Parameters["@id"].Value = int.Parse(curBill);
+            cmd.Parameters["@status"].Value = status;
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        // Load Amount of Bills
         private void LoadAmount()
         {
             string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
@@ -104,8 +151,20 @@ namespace QuanLyDangKyHocPhan
             conn.Close();
 
         }
+
+        // resetform
+        private void ResetForm()
+        {
+            flOrder.Controls.Clear();
+            lbSumPrice.Text = "";
+            txtAmount.Text = "";
+            txtDiscount.Text = "";
+            txtTax.Text = "";
+            lbNameTable.Text = "New Order";
+        }
         #endregion
 
+        // Load listTable onClick
         private void btnListTable_Click(object sender, EventArgs e)
         {
             List<Tables> tables = new List<Tables>();
@@ -134,6 +193,7 @@ namespace QuanLyDangKyHocPhan
 
         }
 
+        //Load list Food onClick
         private void btnFood_Click(object sender, EventArgs e)
         {
             List<Food> foods = new List<Food>();
@@ -161,6 +221,7 @@ namespace QuanLyDangKyHocPhan
             conn.Close();
         }
 
+        //Chose table
         private void btnTable_Click(object sender, EventArgs e)
         {
             List<Tables> tables = new List<Tables>();
@@ -183,7 +244,25 @@ namespace QuanLyDangKyHocPhan
             TableForm frm = new TableForm(SetValue);
             frm.initUI(tables);
             frm.ShowDialog(this);
-            frm.FormClosed += new FormClosedEventHandler(frmClosed);
+            if (DialogResult == DialogResult.OK)
+            {
+                btnListTable_Click(sender, e);
+            }
+            //frm.FormClosed += new FormClosedEventHandler(frmClosed);
+        }
+
+        private void btnXuatHoaDon_Click(object sender, EventArgs e)
+        {
+            LoadAmount();
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            UpdateStatusTable(0);
+            UpdateStatusBill(true);
+            btnListTable_Click(sender, e);
+            ResetForm();
+            MessageBox.Show("Thanh toán thành công!!");
         }
 
         private void frmClosed(object sender, FormClosedEventArgs e)

@@ -34,6 +34,7 @@ namespace QuanLyDangKyHocPhan
         {
             this.curTable = value;
             this.send(curTable,billId);
+            DialogResult = DialogResult.OK;
             this.Close();
         }
 

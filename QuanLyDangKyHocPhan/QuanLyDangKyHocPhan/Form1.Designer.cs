@@ -55,18 +55,18 @@ namespace QuanLyDangKyHocPhan
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
+            this.txtAmount = new Guna.UI.WinForms.GunaTextBox();
+            this.txtDiscount = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTax = new Guna.UI.WinForms.GunaTextBox();
+            this.lbSumPrice = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.btnSave = new Guna.UI.WinForms.GunaGradientButton();
             this.btnPay = new Guna.UI.WinForms.GunaGradientButton();
-            this.lbSumPrice = new Guna.UI.WinForms.GunaLabel();
-            this.txtTax = new Guna.UI.WinForms.GunaTextBox();
-            this.txtDiscount = new Guna.UI.WinForms.GunaTextBox();
-            this.txtAmount = new Guna.UI.WinForms.GunaTextBox();
+            this.btnXuatHoaDon = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel2.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -453,7 +453,7 @@ namespace QuanLyDangKyHocPhan
             this.gunaPanel2.Controls.Add(this.gunaLinePanel1);
             this.gunaPanel2.Location = new System.Drawing.Point(854, 433);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(503, 246);
+            this.gunaPanel2.Size = new System.Drawing.Size(510, 246);
             this.gunaPanel2.TabIndex = 13;
             // 
             // gunaLinePanel1
@@ -477,8 +477,67 @@ namespace QuanLyDangKyHocPhan
             this.gunaLinePanel1.LineTop = 1;
             this.gunaLinePanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(503, 246);
+            this.gunaLinePanel1.Size = new System.Drawing.Size(510, 246);
             this.gunaLinePanel1.TabIndex = 0;
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.BaseColor = System.Drawing.Color.White;
+            this.txtAmount.BorderColor = System.Drawing.Color.Silver;
+            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAmount.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtAmount.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtAmount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAmount.Location = new System.Drawing.Point(339, 194);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.PasswordChar = '\0';
+            this.txtAmount.SelectedText = "";
+            this.txtAmount.Size = new System.Drawing.Size(160, 49);
+            this.txtAmount.TabIndex = 9;
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.BaseColor = System.Drawing.Color.White;
+            this.txtDiscount.BorderColor = System.Drawing.Color.Silver;
+            this.txtDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiscount.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDiscount.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtDiscount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDiscount.Location = new System.Drawing.Point(119, 124);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.PasswordChar = '\0';
+            this.txtDiscount.SelectedText = "";
+            this.txtDiscount.Size = new System.Drawing.Size(74, 30);
+            this.txtDiscount.TabIndex = 8;
+            this.txtDiscount.Text = "0";
+            // 
+            // txtTax
+            // 
+            this.txtTax.BaseColor = System.Drawing.Color.White;
+            this.txtTax.BorderColor = System.Drawing.Color.Silver;
+            this.txtTax.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTax.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTax.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtTax.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTax.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTax.Location = new System.Drawing.Point(119, 88);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.PasswordChar = '\0';
+            this.txtTax.SelectedText = "";
+            this.txtTax.Size = new System.Drawing.Size(74, 30);
+            this.txtTax.TabIndex = 7;
+            this.txtTax.Text = "0";
+            // 
+            // lbSumPrice
+            // 
+            this.lbSumPrice.AutoSize = true;
+            this.lbSumPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbSumPrice.Location = new System.Drawing.Point(138, 47);
+            this.lbSumPrice.Name = "lbSumPrice";
+            this.lbSumPrice.Size = new System.Drawing.Size(0, 20);
+            this.lbSumPrice.TabIndex = 6;
             // 
             // gunaLabel9
             // 
@@ -539,33 +598,6 @@ namespace QuanLyDangKyHocPhan
             this.gunaLabel5.TabIndex = 0;
             this.gunaLabel5.Text = "Chi tiết:";
             // 
-            // btnSave
-            // 
-            this.btnSave.AnimationHoverSpeed = 0.07F;
-            this.btnSave.AnimationSpeed = 0.03F;
-            this.btnSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnSave.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.btnSave.BaseColor2 = System.Drawing.Color.Fuchsia;
-            this.btnSave.BorderColor = System.Drawing.Color.Black;
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_check_file_50px_1;
-            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(1031, 686);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.btnSave.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSave.OnHoverImage = null;
-            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSave.Radius = 5;
-            this.btnSave.Size = new System.Drawing.Size(160, 53);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Lưu hoá đơn";
-            // 
             // btnPay
             // 
             this.btnPay.AnimationHoverSpeed = 0.07F;
@@ -580,7 +612,7 @@ namespace QuanLyDangKyHocPhan
             this.btnPay.ForeColor = System.Drawing.Color.White;
             this.btnPay.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
             this.btnPay.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPay.Location = new System.Drawing.Point(1197, 686);
+            this.btnPay.Location = new System.Drawing.Point(1204, 686);
             this.btnPay.Name = "btnPay";
             this.btnPay.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.btnPay.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -592,71 +624,41 @@ namespace QuanLyDangKyHocPhan
             this.btnPay.Size = new System.Drawing.Size(160, 53);
             this.btnPay.TabIndex = 10;
             this.btnPay.Text = "Thanh toán";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
-            // lbSumPrice
+            // btnXuatHoaDon
             // 
-            this.lbSumPrice.AutoSize = true;
-            this.lbSumPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbSumPrice.Location = new System.Drawing.Point(138, 47);
-            this.lbSumPrice.Name = "lbSumPrice";
-            this.lbSumPrice.Size = new System.Drawing.Size(0, 20);
-            this.lbSumPrice.TabIndex = 6;
-            // 
-            // txtTax
-            // 
-            this.txtTax.BaseColor = System.Drawing.Color.White;
-            this.txtTax.BorderColor = System.Drawing.Color.Silver;
-            this.txtTax.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTax.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtTax.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtTax.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtTax.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTax.Location = new System.Drawing.Point(119, 88);
-            this.txtTax.Name = "txtTax";
-            this.txtTax.PasswordChar = '\0';
-            this.txtTax.SelectedText = "";
-            this.txtTax.Size = new System.Drawing.Size(74, 30);
-            this.txtTax.TabIndex = 7;
-            this.txtTax.Text = "0";
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.BaseColor = System.Drawing.Color.White;
-            this.txtDiscount.BorderColor = System.Drawing.Color.Silver;
-            this.txtDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiscount.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtDiscount.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtDiscount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDiscount.Location = new System.Drawing.Point(119, 124);
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.PasswordChar = '\0';
-            this.txtDiscount.SelectedText = "";
-            this.txtDiscount.Size = new System.Drawing.Size(74, 30);
-            this.txtDiscount.TabIndex = 8;
-            this.txtDiscount.Text = "0";
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.BaseColor = System.Drawing.Color.White;
-            this.txtAmount.BorderColor = System.Drawing.Color.Silver;
-            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAmount.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtAmount.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtAmount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAmount.Location = new System.Drawing.Point(339, 194);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.PasswordChar = '\0';
-            this.txtAmount.SelectedText = "";
-            this.txtAmount.Size = new System.Drawing.Size(160, 49);
-            this.txtAmount.TabIndex = 9;
+            this.btnXuatHoaDon.AnimationHoverSpeed = 0.07F;
+            this.btnXuatHoaDon.AnimationSpeed = 0.03F;
+            this.btnXuatHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.btnXuatHoaDon.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnXuatHoaDon.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btnXuatHoaDon.BorderColor = System.Drawing.Color.Black;
+            this.btnXuatHoaDon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnXuatHoaDon.FocusedColor = System.Drawing.Color.Empty;
+            this.btnXuatHoaDon.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXuatHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btnXuatHoaDon.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_check_file_50px_1;
+            this.btnXuatHoaDon.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnXuatHoaDon.Location = new System.Drawing.Point(1038, 686);
+            this.btnXuatHoaDon.Name = "btnXuatHoaDon";
+            this.btnXuatHoaDon.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnXuatHoaDon.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btnXuatHoaDon.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnXuatHoaDon.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnXuatHoaDon.OnHoverImage = null;
+            this.btnXuatHoaDon.OnPressedColor = System.Drawing.Color.Black;
+            this.btnXuatHoaDon.Radius = 5;
+            this.btnXuatHoaDon.Size = new System.Drawing.Size(160, 53);
+            this.btnXuatHoaDon.TabIndex = 14;
+            this.btnXuatHoaDon.Text = "Xuất hoá đơn";
+            this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click);
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1400, 753);
+            this.Controls.Add(this.btnXuatHoaDon);
             this.Controls.Add(this.gunaPanel2);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnPay);
             this.Controls.Add(this.flOrder);
             this.Controls.Add(this.gunaGradient2Panel2);
@@ -710,7 +712,6 @@ namespace QuanLyDangKyHocPhan
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton5;
         private Guna.UI.WinForms.GunaGradientTileButton btnAccount;
         private Guna.UI.WinForms.GunaGradientButton btnPay;
-        private Guna.UI.WinForms.GunaGradientButton btnSave;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
@@ -723,6 +724,7 @@ namespace QuanLyDangKyHocPhan
         private Guna.UI.WinForms.GunaTextBox txtDiscount;
         private Guna.UI.WinForms.GunaTextBox txtTax;
         private Guna.UI.WinForms.GunaTextBox txtAmount;
+        private Guna.UI.WinForms.GunaGradientButton btnXuatHoaDon;
     }
 }
 

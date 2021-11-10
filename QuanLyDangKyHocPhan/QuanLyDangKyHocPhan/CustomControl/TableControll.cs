@@ -71,7 +71,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             }
         }
 
-        private void UpdateStatusTable()
+        private void UpdateStatusTable(int status)
         {
             string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
             SqlConnection conn = new SqlConnection(connString);
@@ -83,7 +83,7 @@ namespace QuanLyDangKyHocPhan.CustomControl
             cmd.Parameters.Add("@status", SqlDbType.Int);
 
             cmd.Parameters["@id"].Value = table.id;
-            cmd.Parameters["@status"].Value = 1;
+            cmd.Parameters["@status"].Value = status;
 
             conn.Open();
 
@@ -100,15 +100,23 @@ namespace QuanLyDangKyHocPhan.CustomControl
         {
             if (btnValid.Visible == false)
             {
-                UpdateStatusTable();
+                UpdateStatusTable(1);
                 InsertBillsTable();
                 btnValid.Visible = true;
                 this.send(this.table,billID);
             }
             else
             {
-                this.Enabled = true;
+                BillForm billForm = new BillForm();
+                billForm.LoadBills(table.id);
+                billForm.ShowDialog(this);
+                billForm.FormClosed += new FormClosedEventHandler(frmClosed);
             }
+        }
+
+        private void frmClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadStatus(0);
         }
 
         public void LoadTableName(string tableName, Tables currentTable)

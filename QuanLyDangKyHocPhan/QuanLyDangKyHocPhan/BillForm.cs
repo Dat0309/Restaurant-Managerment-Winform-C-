@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QuanLyDangKyHocPhan
+{
+    public partial class BillForm : Form
+    {
+        private int tableId;
+        private string billId;
+        public BillForm()
+        {
+            InitializeComponent();
+        }
+
+        private void BillForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateStatusTable(int status)
+        {
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "EXECUTE TableStatus_Update @id,@status";
+
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters.Add("@status", SqlDbType.Int);
+
+            cmd.Parameters["@id"].Value = tableId;
+            cmd.Parameters["@status"].Value = status;
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        //Update status Bills
+        private void UpdateStatusBill(bool status)
+        {
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "EXECUTE BillsStatus_Update @id,@status";
+
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters.Add("@status", SqlDbType.Bit);
+
+            cmd.Parameters["@id"].Value = billId;
+            cmd.Parameters["@status"].Value = status;
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void LoadBills(int tableId)
+        {
+            dgvBills.Columns.Clear();
+            this.tableId = tableId;
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = $"Select * from bills where TableID = {tableId}";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            conn.Open();
+
+            adapter.Fill(dt);
+            dgvBills.DataSource = dt;
+            dgvBills.Columns[0].ReadOnly = true;
+
+            conn.Close();
+        }
+
+        private void dgvBills_DoubleClick(object sender, EventArgs e)
+        {
+            var billID = dgvBills.SelectedRows[0].Cells[0].Value.ToString();
+
+            BillDetailForm frm = new BillDetailForm();
+            frm.LoadDetail(billID);
+            frm.ShowDialog(this);
+        }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            int index = dgvBills.CurrentRow.Index;
+            if(index != null)
+            {
+                billId = dgvBills.Rows[index].Cells[0].Value.ToString();
+                UpdateStatusTable(0);
+                UpdateStatusBill(true);
+
+                MessageBox.Show("Thanh toán thành công");
+                this.LoadBills(tableId);
+            }
+        }
+    }
+}
