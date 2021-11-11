@@ -41,7 +41,7 @@ namespace QuanLyDangKyHocPhan
             this.flOrder = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaGradientTileButton6 = new Guna.UI.WinForms.GunaGradientTileButton();
-            this.gunaGradientTileButton5 = new Guna.UI.WinForms.GunaGradientTileButton();
+            this.btnFoodinfo = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btnAccount = new Guna.UI.WinForms.GunaGradientTileButton();
             this.btnBills = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
@@ -65,8 +65,8 @@ namespace QuanLyDangKyHocPhan
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.btnPay = new Guna.UI.WinForms.GunaGradientButton();
             this.btnXuatHoaDon = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnPay = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradient2Panel2.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -130,9 +130,8 @@ namespace QuanLyDangKyHocPhan
             // 
             // flpFoodList
             // 
-            this.flpFoodList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpFoodList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.flpFoodList.AutoScroll = true;
             this.flpFoodList.Location = new System.Drawing.Point(218, 145);
             this.flpFoodList.Name = "flpFoodList";
@@ -189,7 +188,7 @@ namespace QuanLyDangKyHocPhan
             // gunaPanel1
             // 
             this.gunaPanel1.Controls.Add(this.gunaGradientTileButton6);
-            this.gunaPanel1.Controls.Add(this.gunaGradientTileButton5);
+            this.gunaPanel1.Controls.Add(this.btnFoodinfo);
             this.gunaPanel1.Controls.Add(this.btnAccount);
             this.gunaPanel1.Controls.Add(this.btnBills);
             this.gunaPanel1.Controls.Add(this.gunaPictureBox1);
@@ -214,7 +213,7 @@ namespace QuanLyDangKyHocPhan
             this.gunaGradientTileButton6.Font = new System.Drawing.Font("Segoe UI Light", 11.75F);
             this.gunaGradientTileButton6.ForeColor = System.Drawing.Color.Gray;
             this.gunaGradientTileButton6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientTileButton6.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px_1;
+            this.gunaGradientTileButton6.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_table_properties_50px_1;
             this.gunaGradientTileButton6.ImageSize = new System.Drawing.Size(32, 32);
             this.gunaGradientTileButton6.Location = new System.Drawing.Point(13, 665);
             this.gunaGradientTileButton6.Name = "gunaGradientTileButton6";
@@ -222,40 +221,41 @@ namespace QuanLyDangKyHocPhan
             this.gunaGradientTileButton6.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.gunaGradientTileButton6.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaGradientTileButton6.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton6.OnHoverImage = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px2;
+            this.gunaGradientTileButton6.OnHoverImage = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_table_properties_50px;
             this.gunaGradientTileButton6.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientTileButton6.Radius = 8;
             this.gunaGradientTileButton6.Size = new System.Drawing.Size(183, 74);
             this.gunaGradientTileButton6.TabIndex = 16;
-            this.gunaGradientTileButton6.Text = "Chức năng B";
+            this.gunaGradientTileButton6.Text = "Quản trị bàn ăn";
             // 
-            // gunaGradientTileButton5
+            // btnFoodinfo
             // 
-            this.gunaGradientTileButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaGradientTileButton5.AnimationSpeed = 0.03F;
-            this.gunaGradientTileButton5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton5.BaseColor1 = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton5.BaseColor2 = System.Drawing.Color.Transparent;
-            this.gunaGradientTileButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton5.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaGradientTileButton5.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaGradientTileButton5.Font = new System.Drawing.Font("Segoe UI Light", 11.75F);
-            this.gunaGradientTileButton5.ForeColor = System.Drawing.Color.Gray;
-            this.gunaGradientTileButton5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.gunaGradientTileButton5.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px_1;
-            this.gunaGradientTileButton5.ImageSize = new System.Drawing.Size(32, 32);
-            this.gunaGradientTileButton5.Location = new System.Drawing.Point(13, 561);
-            this.gunaGradientTileButton5.Name = "gunaGradientTileButton5";
-            this.gunaGradientTileButton5.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
-            this.gunaGradientTileButton5.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
-            this.gunaGradientTileButton5.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradientTileButton5.OnHoverImage = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px2;
-            this.gunaGradientTileButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradientTileButton5.Radius = 8;
-            this.gunaGradientTileButton5.Size = new System.Drawing.Size(183, 74);
-            this.gunaGradientTileButton5.TabIndex = 15;
-            this.gunaGradientTileButton5.Text = "Chức năng";
+            this.btnFoodinfo.AnimationHoverSpeed = 0.07F;
+            this.btnFoodinfo.AnimationSpeed = 0.03F;
+            this.btnFoodinfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnFoodinfo.BaseColor1 = System.Drawing.Color.Transparent;
+            this.btnFoodinfo.BaseColor2 = System.Drawing.Color.Transparent;
+            this.btnFoodinfo.BorderColor = System.Drawing.Color.Black;
+            this.btnFoodinfo.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFoodinfo.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFoodinfo.Font = new System.Drawing.Font("Segoe UI Light", 11.75F);
+            this.btnFoodinfo.ForeColor = System.Drawing.Color.Gray;
+            this.btnFoodinfo.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnFoodinfo.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px_1;
+            this.btnFoodinfo.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnFoodinfo.Location = new System.Drawing.Point(13, 561);
+            this.btnFoodinfo.Name = "btnFoodinfo";
+            this.btnFoodinfo.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnFoodinfo.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.btnFoodinfo.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFoodinfo.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFoodinfo.OnHoverImage = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px2;
+            this.btnFoodinfo.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFoodinfo.Radius = 8;
+            this.btnFoodinfo.Size = new System.Drawing.Size(183, 74);
+            this.btnFoodinfo.TabIndex = 15;
+            this.btnFoodinfo.Text = "Quản trị món ăn";
+            this.btnFoodinfo.Click += new System.EventHandler(this.btnFoodinfo_Click);
             // 
             // btnAccount
             // 
@@ -270,7 +270,7 @@ namespace QuanLyDangKyHocPhan
             this.btnAccount.Font = new System.Drawing.Font("Segoe UI Light", 11.75F);
             this.btnAccount.ForeColor = System.Drawing.Color.Gray;
             this.btnAccount.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAccount.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px_1;
+            this.btnAccount.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_male_user_50px;
             this.btnAccount.ImageSize = new System.Drawing.Size(32, 32);
             this.btnAccount.Location = new System.Drawing.Point(13, 457);
             this.btnAccount.Name = "btnAccount";
@@ -278,12 +278,12 @@ namespace QuanLyDangKyHocPhan
             this.btnAccount.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnAccount.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAccount.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAccount.OnHoverImage = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_no_crustaceans_50px2;
+            this.btnAccount.OnHoverImage = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_male_user_50px_1;
             this.btnAccount.OnPressedColor = System.Drawing.Color.Black;
             this.btnAccount.Radius = 8;
             this.btnAccount.Size = new System.Drawing.Size(183, 74);
             this.btnAccount.TabIndex = 14;
-            this.btnAccount.Text = "Tài khoản";
+            this.btnAccount.Text = "Quản trị tại khoản";
             // 
             // btnBills
             // 
@@ -312,6 +312,7 @@ namespace QuanLyDangKyHocPhan
             this.btnBills.Size = new System.Drawing.Size(183, 74);
             this.btnBills.TabIndex = 13;
             this.btnBills.Text = "Danh sách hoá đơn";
+            this.btnBills.Click += new System.EventHandler(this.btnBills_Click);
             // 
             // gunaPictureBox1
             // 
@@ -401,6 +402,7 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaGradient2Panel3
             // 
+            this.gunaGradient2Panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaGradient2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaGradient2Panel3.Controls.Add(this.gunaLabel4);
             this.gunaGradient2Panel3.Controls.Add(this.gunaCirclePictureBox1);
@@ -459,6 +461,8 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaPanel2
             // 
+            this.gunaPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaPanel2.Controls.Add(this.gunaLinePanel1);
             this.gunaPanel2.Location = new System.Drawing.Point(854, 433);
             this.gunaPanel2.Name = "gunaPanel2";
@@ -467,8 +471,6 @@ namespace QuanLyDangKyHocPhan
             // 
             // gunaLinePanel1
             // 
-            this.gunaLinePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLinePanel1.Controls.Add(this.txtAmount);
             this.gunaLinePanel1.Controls.Add(this.txtDiscount);
             this.gunaLinePanel1.Controls.Add(this.txtTax);
@@ -479,6 +481,7 @@ namespace QuanLyDangKyHocPhan
             this.gunaLinePanel1.Controls.Add(this.gunaLabel6);
             this.gunaLinePanel1.Controls.Add(this.gunaSeparator1);
             this.gunaLinePanel1.Controls.Add(this.gunaLabel5);
+            this.gunaLinePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLinePanel1.LineBottom = 1;
             this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
             this.gunaLinePanel1.LineLeft = 1;
@@ -608,35 +611,6 @@ namespace QuanLyDangKyHocPhan
             this.gunaLabel5.TabIndex = 0;
             this.gunaLabel5.Text = "Chi tiết:";
             // 
-            // btnPay
-            // 
-            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPay.AnimationHoverSpeed = 0.07F;
-            this.btnPay.AnimationSpeed = 0.03F;
-            this.btnPay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPay.BaseColor1 = System.Drawing.Color.Green;
-            this.btnPay.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPay.BorderColor = System.Drawing.Color.Black;
-            this.btnPay.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnPay.FocusedColor = System.Drawing.Color.Empty;
-            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
-            this.btnPay.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPay.Location = new System.Drawing.Point(1204, 686);
-            this.btnPay.Name = "btnPay";
-            this.btnPay.OnHoverBaseColor1 = System.Drawing.Color.Green;
-            this.btnPay.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPay.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnPay.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnPay.OnHoverImage = null;
-            this.btnPay.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPay.Radius = 5;
-            this.btnPay.Size = new System.Drawing.Size(160, 53);
-            this.btnPay.TabIndex = 10;
-            this.btnPay.Text = "Thanh toán";
-            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
-            // 
             // btnXuatHoaDon
             // 
             this.btnXuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -666,8 +640,38 @@ namespace QuanLyDangKyHocPhan
             this.btnXuatHoaDon.Text = "Xuất hoá đơn";
             this.btnXuatHoaDon.Click += new System.EventHandler(this.btnXuatHoaDon_Click);
             // 
+            // btnPay
+            // 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPay.AnimationHoverSpeed = 0.07F;
+            this.btnPay.AnimationSpeed = 0.03F;
+            this.btnPay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPay.BaseColor1 = System.Drawing.Color.Green;
+            this.btnPay.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPay.BorderColor = System.Drawing.Color.Black;
+            this.btnPay.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnPay.FocusedColor = System.Drawing.Color.Empty;
+            this.btnPay.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPay.ForeColor = System.Drawing.Color.White;
+            this.btnPay.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
+            this.btnPay.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnPay.Location = new System.Drawing.Point(1204, 686);
+            this.btnPay.Name = "btnPay";
+            this.btnPay.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.btnPay.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPay.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnPay.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnPay.OnHoverImage = null;
+            this.btnPay.OnPressedColor = System.Drawing.Color.Black;
+            this.btnPay.Radius = 5;
+            this.btnPay.Size = new System.Drawing.Size(160, 53);
+            this.btnPay.TabIndex = 10;
+            this.btnPay.Text = "Thanh toán";
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
+            // 
             // Form1
             // 
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 753);
             this.Controls.Add(this.btnXuatHoaDon);
             this.Controls.Add(this.gunaPanel2);
@@ -721,7 +725,7 @@ namespace QuanLyDangKyHocPhan
         private Guna.UI.WinForms.GunaGradientTileButton btnFood;
         private Guna.UI.WinForms.GunaGradientTileButton btnListTable;
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton6;
-        private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton5;
+        private Guna.UI.WinForms.GunaGradientTileButton btnFoodinfo;
         private Guna.UI.WinForms.GunaGradientTileButton btnAccount;
         private Guna.UI.WinForms.GunaGradientButton btnPay;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;

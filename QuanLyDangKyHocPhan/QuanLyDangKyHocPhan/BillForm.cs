@@ -97,7 +97,7 @@ namespace QuanLyDangKyHocPhan
         private void btnPay_Click(object sender, EventArgs e)
         {
             int index = dgvBills.CurrentRow.Index;
-            if(index != null)
+            if (index != null)
             {
                 billId = dgvBills.Rows[index].Cells[0].Value.ToString();
                 UpdateStatusTable(0);
@@ -106,6 +106,22 @@ namespace QuanLyDangKyHocPhan
                 MessageBox.Show("Thanh toán thành công");
                 this.LoadBills(tableId);
                 DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void dgvBills_Click(object sender, EventArgs e)
+        {
+            int index = dgvBills.CurrentRow.Index;
+            if (index != null)
+            {
+                lbSumPrice.Text = dgvBills.Rows[index].Cells["Amount"].Value.ToString();
+                txtDiscount.Text = dgvBills.Rows[index].Cells["Discount"].Value.ToString();
+                txtTax.Text = dgvBills.Rows[index].Cells["Tax"].Value.ToString();
+
+                int discount = int.Parse(lbSumPrice.Text) * int.Parse(txtDiscount.Text);
+                int tax = int.Parse(lbSumPrice.Text) * int.Parse(txtTax.Text);
+
+                txtAmount.Text = (int.Parse(lbSumPrice.Text) - discount - tax).ToString();
             }
         }
     }

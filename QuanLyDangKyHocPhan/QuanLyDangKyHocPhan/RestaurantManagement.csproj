@@ -67,6 +67,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCateForm.Designer.cs">
+      <DependentUpon>AddCateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="BillForm.Designer.cs">
       <DependentUpon>BillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillOrderForm.Designer.cs">
+      <DependentUpon>BillOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\DetailFood.cs">
       <SubType>UserControl</SubType>
@@ -97,6 +109,18 @@
     <Compile Include="CustomControl\TableControll.Designer.cs">
       <DependentUpon>TableControll.cs</DependentUpon>
     </Compile>
+    <Compile Include="FoodControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodControlForm.Designer.cs">
+      <DependentUpon>FoodControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoodInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodInfoForm.Designer.cs">
+      <DependentUpon>FoodInfoForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +138,17 @@
     <Compile Include="TableForm.Designer.cs">
       <DependentUpon>TableForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddCateForm.resx">
+      <DependentUpon>AddCateForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BillDetailForm.resx">
       <DependentUpon>BillDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BillForm.resx">
       <DependentUpon>BillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillOrderForm.resx">
+      <DependentUpon>BillOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\DetailFood.resx">
       <DependentUpon>DetailFood.cs</DependentUpon>
@@ -128,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\TableControll.resx">
       <DependentUpon>TableControll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodControlForm.resx">
+      <DependentUpon>FoodControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodInfoForm.resx">
+      <DependentUpon>FoodInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -159,7 +195,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8_male_user_50px.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_dinner_50px_1.png" />
   </ItemGroup>
@@ -246,6 +284,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8_user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_male_user_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_table_properties_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_table_properties_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,3 +19,7 @@ E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPha
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TableForm.resources
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.BillForm.resources
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.BillDetailForm.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.BillOrderForm.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.FoodInfoForm.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.AddCateForm.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.FoodControlForm.resources

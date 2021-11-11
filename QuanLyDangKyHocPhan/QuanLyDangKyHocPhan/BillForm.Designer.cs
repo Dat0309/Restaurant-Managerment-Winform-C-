@@ -28,45 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvBills = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox2 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.btnTransfer = new Guna.UI.WinForms.GunaGradientButton();
             this.btnSynchro = new Guna.UI.WinForms.GunaGradientButton();
             this.btnPay = new Guna.UI.WinForms.GunaGradientButton();
+            this.pnBills = new Guna.UI.WinForms.GunaShadowPanel();
+            this.txtAmount = new Guna.UI.WinForms.GunaTextBox();
+            this.txtDiscount = new Guna.UI.WinForms.GunaTextBox();
+            this.txtTax = new Guna.UI.WinForms.GunaTextBox();
+            this.lbSumPrice = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBills)).BeginInit();
+            this.pnBills.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvBills
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
-            this.dgvBills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
+            this.dgvBills.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBills.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBills.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBills.BackgroundColor = System.Drawing.Color.White;
             this.dgvBills.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBills.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBills.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBills.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBills.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBills.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(216)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBills.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBills.EnableHeadersVisualStyles = false;
             this.dgvBills.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(192)))), ((int)(((byte)(188)))));
             this.dgvBills.Location = new System.Drawing.Point(12, 51);
@@ -75,7 +87,7 @@
             this.dgvBills.RowHeadersWidth = 51;
             this.dgvBills.RowTemplate.Height = 24;
             this.dgvBills.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBills.Size = new System.Drawing.Size(1102, 521);
+            this.dgvBills.Size = new System.Drawing.Size(1102, 243);
             this.dgvBills.TabIndex = 0;
             this.dgvBills.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Alizarin;
             this.dgvBills.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(201)))), ((int)(((byte)(197)))));
@@ -99,57 +111,12 @@
             this.dgvBills.ThemeStyle.RowsStyle.Height = 24;
             this.dgvBills.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(135)))), ((int)(((byte)(125)))));
             this.dgvBills.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvBills.Click += new System.EventHandler(this.dgvBills_Click);
             this.dgvBills.DoubleClick += new System.EventHandler(this.dgvBills_DoubleClick);
-            // 
-            // gunaControlBox3
-            // 
-            this.gunaControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox3.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox3.AnimationSpeed = 0.03F;
-            this.gunaControlBox3.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MinimizeBox;
-            this.gunaControlBox3.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(977, 1);
-            this.gunaControlBox3.Name = "gunaControlBox3";
-            this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox3.TabIndex = 6;
-            // 
-            // gunaControlBox2
-            // 
-            this.gunaControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox2.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox2.AnimationSpeed = 0.03F;
-            this.gunaControlBox2.ControlBoxType = Guna.UI.WinForms.FormControlBoxType.MaximizeBox;
-            this.gunaControlBox2.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.IconSize = 15F;
-            this.gunaControlBox2.Location = new System.Drawing.Point(1028, 1);
-            this.gunaControlBox2.Name = "gunaControlBox2";
-            this.gunaControlBox2.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox2.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox2.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox2.TabIndex = 5;
-            // 
-            // gunaControlBox1
-            // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1079, 1);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox1.TabIndex = 4;
             // 
             // btnTransfer
             // 
+            this.btnTransfer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTransfer.AnimationHoverSpeed = 0.07F;
             this.btnTransfer.AnimationSpeed = 0.03F;
             this.btnTransfer.BackColor = System.Drawing.Color.Transparent;
@@ -162,7 +129,7 @@
             this.btnTransfer.ForeColor = System.Drawing.Color.White;
             this.btnTransfer.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
             this.btnTransfer.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTransfer.Location = new System.Drawing.Point(646, 578);
+            this.btnTransfer.Location = new System.Drawing.Point(654, 413);
             this.btnTransfer.Name = "btnTransfer";
             this.btnTransfer.OnHoverBaseColor1 = System.Drawing.Color.DarkRed;
             this.btnTransfer.OnHoverBaseColor2 = System.Drawing.Color.IndianRed;
@@ -177,6 +144,7 @@
             // 
             // btnSynchro
             // 
+            this.btnSynchro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSynchro.AnimationHoverSpeed = 0.07F;
             this.btnSynchro.AnimationSpeed = 0.03F;
             this.btnSynchro.BackColor = System.Drawing.Color.Transparent;
@@ -189,7 +157,7 @@
             this.btnSynchro.ForeColor = System.Drawing.Color.White;
             this.btnSynchro.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
             this.btnSynchro.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSynchro.Location = new System.Drawing.Point(812, 578);
+            this.btnSynchro.Location = new System.Drawing.Point(820, 413);
             this.btnSynchro.Name = "btnSynchro";
             this.btnSynchro.OnHoverBaseColor1 = System.Drawing.Color.Teal;
             this.btnSynchro.OnHoverBaseColor2 = System.Drawing.Color.Aqua;
@@ -204,6 +172,7 @@
             // 
             // btnPay
             // 
+            this.btnPay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPay.AnimationHoverSpeed = 0.07F;
             this.btnPay.AnimationSpeed = 0.03F;
             this.btnPay.BackColor = System.Drawing.Color.Transparent;
@@ -216,7 +185,7 @@
             this.btnPay.ForeColor = System.Drawing.Color.White;
             this.btnPay.Image = global::QuanLyDangKyHocPhan.Properties.Resources.icons8_add_dollar_50px1;
             this.btnPay.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnPay.Location = new System.Drawing.Point(945, 578);
+            this.btnPay.Location = new System.Drawing.Point(953, 413);
             this.btnPay.Name = "btnPay";
             this.btnPay.OnHoverBaseColor1 = System.Drawing.Color.Green;
             this.btnPay.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -230,24 +199,164 @@
             this.btnPay.Text = "Thanh toán";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
+            // pnBills
+            // 
+            this.pnBills.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnBills.BackColor = System.Drawing.Color.Transparent;
+            this.pnBills.BaseColor = System.Drawing.Color.White;
+            this.pnBills.Controls.Add(this.txtAmount);
+            this.pnBills.Controls.Add(this.txtDiscount);
+            this.pnBills.Controls.Add(this.txtTax);
+            this.pnBills.Controls.Add(this.lbSumPrice);
+            this.pnBills.Controls.Add(this.gunaLabel9);
+            this.pnBills.Controls.Add(this.gunaLabel8);
+            this.pnBills.Controls.Add(this.gunaLabel7);
+            this.pnBills.Controls.Add(this.gunaLabel6);
+            this.pnBills.Controls.Add(this.gunaSeparator1);
+            this.pnBills.Controls.Add(this.gunaLabel5);
+            this.pnBills.Location = new System.Drawing.Point(12, 310);
+            this.pnBills.Name = "pnBills";
+            this.pnBills.ShadowColor = System.Drawing.Color.Black;
+            this.pnBills.Size = new System.Drawing.Size(635, 261);
+            this.pnBills.TabIndex = 14;
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.BaseColor = System.Drawing.Color.White;
+            this.txtAmount.BorderColor = System.Drawing.Color.Silver;
+            this.txtAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAmount.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtAmount.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtAmount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtAmount.Location = new System.Drawing.Point(458, 196);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.PasswordChar = '\0';
+            this.txtAmount.SelectedText = "";
+            this.txtAmount.Size = new System.Drawing.Size(160, 49);
+            this.txtAmount.TabIndex = 19;
+            // 
+            // txtDiscount
+            // 
+            this.txtDiscount.BaseColor = System.Drawing.Color.White;
+            this.txtDiscount.BorderColor = System.Drawing.Color.Silver;
+            this.txtDiscount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiscount.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtDiscount.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtDiscount.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDiscount.Location = new System.Drawing.Point(122, 126);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.PasswordChar = '\0';
+            this.txtDiscount.SelectedText = "";
+            this.txtDiscount.Size = new System.Drawing.Size(74, 30);
+            this.txtDiscount.TabIndex = 18;
+            this.txtDiscount.Text = "0";
+            // 
+            // txtTax
+            // 
+            this.txtTax.BaseColor = System.Drawing.Color.White;
+            this.txtTax.BorderColor = System.Drawing.Color.Silver;
+            this.txtTax.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTax.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTax.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtTax.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtTax.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTax.Location = new System.Drawing.Point(122, 90);
+            this.txtTax.Name = "txtTax";
+            this.txtTax.PasswordChar = '\0';
+            this.txtTax.SelectedText = "";
+            this.txtTax.Size = new System.Drawing.Size(74, 30);
+            this.txtTax.TabIndex = 17;
+            this.txtTax.Text = "0";
+            // 
+            // lbSumPrice
+            // 
+            this.lbSumPrice.AutoSize = true;
+            this.lbSumPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbSumPrice.Location = new System.Drawing.Point(141, 49);
+            this.lbSumPrice.Name = "lbSumPrice";
+            this.lbSumPrice.Size = new System.Drawing.Size(0, 20);
+            this.lbSumPrice.TabIndex = 16;
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel9.Location = new System.Drawing.Point(19, 172);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(100, 23);
+            this.gunaLabel9.TabIndex = 15;
+            this.gunaLabel9.Text = "Thành tiền:";
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel8.Location = new System.Drawing.Point(21, 126);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(67, 20);
+            this.gunaLabel8.TabIndex = 14;
+            this.gunaLabel8.Text = "Discount";
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel7.Location = new System.Drawing.Point(19, 90);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(41, 20);
+            this.gunaLabel7.TabIndex = 13;
+            this.gunaLabel7.Text = "Thuế";
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel6.Location = new System.Drawing.Point(19, 49);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(91, 20);
+            this.gunaLabel6.TabIndex = 12;
+            this.gunaLabel6.Text = "Tổng số tiền";
+            // 
+            // gunaSeparator1
+            // 
+            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.gunaSeparator1.Location = new System.Drawing.Point(135, 180);
+            this.gunaSeparator1.Name = "gunaSeparator1";
+            this.gunaSeparator1.Size = new System.Drawing.Size(483, 10);
+            this.gunaSeparator1.TabIndex = 11;
+            this.gunaSeparator1.Thickness = 5;
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(16, 12);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(63, 20);
+            this.gunaLabel5.TabIndex = 10;
+            this.gunaLabel5.Text = "Chi tiết:";
+            // 
             // BillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(1126, 657);
+            this.ClientSize = new System.Drawing.Size(1126, 581);
+            this.Controls.Add(this.pnBills);
             this.Controls.Add(this.btnTransfer);
             this.Controls.Add(this.btnSynchro);
             this.Controls.Add(this.btnPay);
-            this.Controls.Add(this.gunaControlBox3);
-            this.Controls.Add(this.gunaControlBox2);
-            this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.dgvBills);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BillForm";
             this.Text = "BillForm";
             this.Load += new System.EventHandler(this.BillForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBills)).EndInit();
+            this.pnBills.ResumeLayout(false);
+            this.pnBills.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -255,11 +364,19 @@
         #endregion
 
         private Guna.UI.WinForms.GunaDataGridView dgvBills;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox3;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox2;
-        private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaGradientButton btnPay;
         private Guna.UI.WinForms.GunaGradientButton btnSynchro;
         private Guna.UI.WinForms.GunaGradientButton btnTransfer;
+        private Guna.UI.WinForms.GunaShadowPanel pnBills;
+        private Guna.UI.WinForms.GunaTextBox txtAmount;
+        private Guna.UI.WinForms.GunaTextBox txtDiscount;
+        private Guna.UI.WinForms.GunaTextBox txtTax;
+        private Guna.UI.WinForms.GunaLabel lbSumPrice;
+        private Guna.UI.WinForms.GunaLabel gunaLabel9;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
+        private Guna.UI.WinForms.GunaLabel gunaLabel7;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
     }
 }

@@ -265,6 +265,19 @@ namespace QuanLyDangKyHocPhan
             MessageBox.Show("Thanh toán thành công!!");
         }
 
+        private void btnBills_Click(object sender, EventArgs e)
+        {
+            BillOrderForm frm = new BillOrderForm();
+            frm.LoadBills();
+            frm.ShowDialog(this);
+        }
+
+        private void btnFoodinfo_Click(object sender, EventArgs e)
+        {
+            FoodInfoForm frm = new FoodInfoForm();
+            frm.ShowDialog(this);
+        }
+
         private void frmClosed(object sender, FormClosedEventArgs e)
         {
             btnListTable_Click(sender, e);
