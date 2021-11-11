@@ -291,6 +291,13 @@ namespace QuanLyDangKyHocPhan
             frm.ShowDialog(this);
         }
 
+        private void tsmChangePass_Click(object sender, EventArgs e)
+        {
+            ChangePassForm frm = new ChangePassForm();
+            frm.Show(this);
+
+        }
+
         private void frmClosed(object sender, FormClosedEventArgs e)
         {
             btnListTable_Click(sender, e);

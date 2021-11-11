@@ -103,6 +103,12 @@
     <Compile Include="BillsMemoryForm.Designer.cs">
       <DependentUpon>BillsMemoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangePassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassForm.Designer.cs">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\DetailFood.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BillsMemoryForm.resx">
       <DependentUpon>BillsMemoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassForm.resx">
+      <DependentUpon>ChangePassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\DetailFood.resx">
       <DependentUpon>DetailFood.cs</DependentUpon>

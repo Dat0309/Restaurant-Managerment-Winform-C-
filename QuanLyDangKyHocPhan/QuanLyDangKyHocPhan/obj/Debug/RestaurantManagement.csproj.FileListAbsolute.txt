@@ -28,3 +28,4 @@ E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPha
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.TableInfoForm.resources
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.BillsMemoryForm.resources
 E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.FrmTableBills.resources
+E:\NAM3\Restaurant-Managerment-Winform-C-\QuanLyDangKyHocPhan\QuanLyDangKyHocPhan\obj\Debug\QuanLyDangKyHocPhan.ChangePassForm.resources
