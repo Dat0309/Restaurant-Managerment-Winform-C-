@@ -124,5 +124,16 @@ namespace QuanLyDangKyHocPhan
                 txtAmount.Text = (int.Parse(lbSumPrice.Text) - discount - tax).ToString();
             }
         }
+
+        private void btnTransfer_Click(object sender, EventArgs e)
+        {
+            int index = dgvBills.CurrentRow.Index;
+            if (index != null)
+            {
+                billId = dgvBills.Rows[index].Cells[0].Value.ToString();
+                UpdateStatusTable(0);
+                
+            }
+        }
     }
 }

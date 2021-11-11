@@ -141,6 +141,7 @@
             this.btnTransfer.Size = new System.Drawing.Size(160, 53);
             this.btnTransfer.TabIndex = 13;
             this.btnTransfer.Text = "Chuyển bàn";
+            this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
             // 
             // btnSynchro
             // 
