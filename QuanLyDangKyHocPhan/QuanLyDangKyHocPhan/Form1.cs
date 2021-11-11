@@ -278,6 +278,19 @@ namespace QuanLyDangKyHocPhan
             frm.ShowDialog(this);
         }
 
+        private void gunaGradientTileButton6_Click(object sender, EventArgs e)
+        {
+            TableInfoForm frm = new TableInfoForm();
+            frm.Show(this);
+            frm.LoadTable();
+        }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            AccountForm frm = new AccountForm();
+            frm.ShowDialog(this);
+        }
+
         private void frmClosed(object sender, FormClosedEventArgs e)
         {
             btnListTable_Click(sender, e);

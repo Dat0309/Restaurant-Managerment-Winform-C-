@@ -227,6 +227,7 @@ namespace QuanLyDangKyHocPhan
             this.gunaGradientTileButton6.Size = new System.Drawing.Size(183, 74);
             this.gunaGradientTileButton6.TabIndex = 16;
             this.gunaGradientTileButton6.Text = "Quản trị bàn ăn";
+            this.gunaGradientTileButton6.Click += new System.EventHandler(this.gunaGradientTileButton6_Click);
             // 
             // btnFoodinfo
             // 
@@ -284,6 +285,7 @@ namespace QuanLyDangKyHocPhan
             this.btnAccount.Size = new System.Drawing.Size(183, 74);
             this.btnAccount.TabIndex = 14;
             this.btnAccount.Text = "Quản trị tại khoản";
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnBills
             // 
