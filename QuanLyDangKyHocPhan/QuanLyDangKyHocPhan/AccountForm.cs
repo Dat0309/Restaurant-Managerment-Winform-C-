@@ -33,15 +33,17 @@ namespace QuanLyDangKyHocPhan
             adapter.Fill(dt);
             dgvAccount.DataSource = dt;
             dgvAccount.Columns[0].ReadOnly = true;
-            for(int i=0; i<dgvAccount.RowCount - 1;i++)
-            { 
-                MahoaMD5(dgvAccount.Rows[i].Cells["Password"].Value.ToString(),i);
+            VietSub();
+
+            for (int i = 0; i < dgvAccount.RowCount - 1; i++)
+            {
+                MahoaMD5(dgvAccount.Rows[i].Cells["Password"].Value.ToString(), i);
             }
 
             conn.Close();
         }
 
-        private void MahoaMD5(string pass,int index)
+        private void MahoaMD5(string pass, int index)
         {
             MD5 mh = MD5.Create();
             //Chuyển kiểu chuổi thành kiểu byte
@@ -86,95 +88,110 @@ namespace QuanLyDangKyHocPhan
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if (Validation())
             {
-                string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
-                SqlConnection conn = new SqlConnection(connString);
-
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE Account_Insert @account,@pass,@fullname,@email,@tell,@date";
-
-                cmd.Parameters.Add("@account", SqlDbType.NVarChar, 100);
-                cmd.Parameters.Add("@pass", SqlDbType.NVarChar, 200);
-                cmd.Parameters.Add("@fullname", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@email", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@tell", SqlDbType.NVarChar, 200);
-                cmd.Parameters.Add("@date", SqlDbType.SmallDateTime);
-
-                cmd.Parameters["@account"].Value = txtAccountName.Text;
-                cmd.Parameters["@pass"].Value = txtPass.Text;
-                cmd.Parameters["@fullname"].Value = txtFullName.Text;
-                cmd.Parameters["@email"].Value = txtEmail.Text;
-                cmd.Parameters["@tell"].Value = mtbPhone.Text;
-                cmd.Parameters["@date"].Value = DateTime.Now.ToShortDateString();
-
-                conn.Open();
-
-                int numOfRows = cmd.ExecuteNonQuery();
-
-                if (numOfRows == 1)
+                try
                 {
-                    LoadAccount();
-                    ResetForm();
-                    MessageBox.Show("Them tai khoan thanh cong");
-                }
-                else
-                {
-                    MessageBox.Show("Loi", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                }
+                    string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+                    SqlConnection conn = new SqlConnection(connString);
 
-                conn.Close();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "EXECUTE Account_Insert @account,@pass,@fullname,@email,@tell,@date";
+
+                    cmd.Parameters.Add("@account", SqlDbType.NVarChar, 100);
+                    cmd.Parameters.Add("@pass", SqlDbType.NVarChar, 200);
+                    cmd.Parameters.Add("@fullname", SqlDbType.NVarChar, 1000);
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar, 1000);
+                    cmd.Parameters.Add("@tell", SqlDbType.NVarChar, 200);
+                    cmd.Parameters.Add("@date", SqlDbType.SmallDateTime);
+
+                    cmd.Parameters["@account"].Value = txtAccountName.Text;
+                    cmd.Parameters["@pass"].Value = txtPass.Text;
+                    cmd.Parameters["@fullname"].Value = txtFullName.Text;
+                    cmd.Parameters["@email"].Value = txtEmail.Text;
+                    cmd.Parameters["@tell"].Value = mtbPhone.Text;
+                    cmd.Parameters["@date"].Value = DateTime.Now.ToShortDateString();
+
+                    conn.Open();
+
+                    int numOfRows = cmd.ExecuteNonQuery();
+
+                    if (numOfRows == 1)
+                    {
+                        LoadAccount();
+                        ResetForm();
+                        MessageBox.Show("Them tai khoan thanh cong");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Loi", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    }
+
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "SQL Error");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "SQL Error");
+                MessageBox.Show("Loi", "Vui lòng điền đủ thông tin", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
+            if (Validation())
             {
-                string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
-                SqlConnection conn = new SqlConnection(connString);
-
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE Account_Update @account,@pass,@fullname,@email,@tell,@date";
-
-                cmd.Parameters.Add("@account", SqlDbType.NVarChar, 100);
-                cmd.Parameters.Add("@pass", SqlDbType.NVarChar, 200);
-                cmd.Parameters.Add("@fullname", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@email", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@tell", SqlDbType.NVarChar, 200);
-                cmd.Parameters.Add("@date", SqlDbType.SmallDateTime);
-
-                cmd.Parameters["@account"].Value = txtAccountName.Text;
-                cmd.Parameters["@pass"].Value = txtPass.Text;
-                cmd.Parameters["@fullname"].Value = txtFullName.Text;
-                cmd.Parameters["@email"].Value = txtEmail.Text;
-                cmd.Parameters["@tell"].Value = mtbPhone.Text;
-                cmd.Parameters["@date"].Value = DateTime.Now.ToShortDateString();
-
-                conn.Open();
-
-                int numOfRows = cmd.ExecuteNonQuery();
-
-                if (numOfRows == 1)
+                try
                 {
-                    LoadAccount();
-                    ResetForm();
-                    MessageBox.Show("Cap nhat tai khoan thanh cong");
+                    string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+                    SqlConnection conn = new SqlConnection(connString);
+
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandText = "EXECUTE Account_Update @account,@pass,@fullname,@email,@tell,@date";
+
+                    cmd.Parameters.Add("@account", SqlDbType.NVarChar, 100);
+                    cmd.Parameters.Add("@pass", SqlDbType.NVarChar, 200);
+                    cmd.Parameters.Add("@fullname", SqlDbType.NVarChar, 1000);
+                    cmd.Parameters.Add("@email", SqlDbType.NVarChar, 1000);
+                    cmd.Parameters.Add("@tell", SqlDbType.NVarChar, 200);
+                    cmd.Parameters.Add("@date", SqlDbType.SmallDateTime);
+
+                    cmd.Parameters["@account"].Value = txtAccountName.Text;
+                    cmd.Parameters["@pass"].Value = txtPass.Text;
+                    cmd.Parameters["@fullname"].Value = txtFullName.Text;
+                    cmd.Parameters["@email"].Value = txtEmail.Text;
+                    cmd.Parameters["@tell"].Value = mtbPhone.Text;
+                    cmd.Parameters["@date"].Value = DateTime.Now.ToShortDateString();
+
+                    conn.Open();
+
+                    int numOfRows = cmd.ExecuteNonQuery();
+
+                    if (numOfRows == 1)
+                    {
+                        LoadAccount();
+                        ResetForm();
+                        MessageBox.Show("Cap nhat tai khoan thanh cong");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Loi", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    }
+
+                    conn.Close();
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Loi", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "SQL Error");
                 }
 
-                conn.Close();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "SQL Error");
+                MessageBox.Show("Loi", "Vui lòng điền đủ thông tin", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
             }
         }
 
@@ -215,6 +232,25 @@ namespace QuanLyDangKyHocPhan
             {
                 MessageBox.Show(ex.Message, "Sql Error");
             }
+        }
+
+        private bool Validation()
+        {
+            if (string.IsNullOrEmpty(txtAccountName.Text)) return false;
+            else if (string.IsNullOrEmpty(txtPass.Text)) return false;
+            else if (string.IsNullOrEmpty(txtEmail.Text)) return false;
+            else if (string.IsNullOrEmpty(txtFullName.Text)) return false;
+            return true;
+        }
+
+        private void VietSub()
+        {
+            dgvAccount.Columns[0].HeaderText = "Tài khoản";
+            dgvAccount.Columns[1].HeaderText = "Mật khẩu";
+            dgvAccount.Columns[2].HeaderText = "Họ tên";
+            dgvAccount.Columns[3].HeaderText = "Email";
+            dgvAccount.Columns[4].HeaderText = "Điện thoại";
+            dgvAccount.Columns[5].HeaderText = "Ngày tạo";
         }
     }
 }

@@ -82,6 +82,16 @@ namespace QuanLyDangKyHocPhan
             dgvBills.DataSource = dt;
             dgvBills.Columns[0].ReadOnly = true;
 
+            dgvBills.Columns[0].HeaderText = "Mã hoá đơn";
+            dgvBills.Columns[0].HeaderText = "Tên hoá đơn";
+            dgvBills.Columns[0].HeaderText = "Mã bàn ăn";
+            dgvBills.Columns[0].HeaderText = "Số tiền";
+            dgvBills.Columns[0].HeaderText = "Khuyến mãi";
+            dgvBills.Columns[0].HeaderText = "Thuế";
+            dgvBills.Columns[0].HeaderText = "Thanh toán";
+            dgvBills.Columns[0].HeaderText = "Ngày nhập";
+            dgvBills.Columns[0].HeaderText = "Nhân viên";
+
             conn.Close();
         }
 

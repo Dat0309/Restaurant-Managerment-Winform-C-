@@ -78,6 +78,15 @@ namespace QuanLyDangKyHocPhan
 
             dgvFoodList.Columns[0].ReadOnly = true;
 
+
+            dgvFoodList.Columns[0].HeaderText = "Mã món ăn";
+            dgvFoodList.Columns[1].HeaderText = "Tên món";
+            dgvFoodList.Columns[2].HeaderText = "Đơn vị";
+            dgvFoodList.Columns[3].HeaderText = "Nhóm món ăn";
+            dgvFoodList.Columns[4].HeaderText = "Giá";
+            dgvFoodList.Columns[5].HeaderText = "Ghi chú";
+            dgvFoodList.Columns[6].HeaderText = "Hình ảnh";
+
             lbCatName.Text = cbbCategory.Text;
             lbQuantity.Text = foodTb.Rows.Count.ToString();
         }

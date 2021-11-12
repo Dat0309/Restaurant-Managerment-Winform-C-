@@ -40,6 +40,11 @@ namespace QuanLyDangKyHocPhan
                 dgvDetailBill.DataSource = dt;
                 dgvDetailBill.Columns[0].ReadOnly = true;
 
+                dgvDetailBill.Columns[0].HeaderText = "Mã";
+                dgvDetailBill.Columns[1].HeaderText = "Tên món ăn";
+                dgvDetailBill.Columns[2].HeaderText = "Số lượng";
+                
+
                 conn.Close();
             }
             catch (Exception ex)

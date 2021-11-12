@@ -35,7 +35,11 @@ namespace QuanLyDangKyHocPhan
             dgvRole.DataSource = table;
 
             // Prevent user to edit ID
-            dgvRole.Columns[1].ReadOnly = true;
+            dgvRole.Columns[0].ReadOnly = true;
+
+            dgvRole.Columns[0].HeaderText = "Tên quyền";
+            dgvRole.Columns[1].HeaderText = "Path";
+            dgvRole.Columns[2].HeaderText = "Ghi chú";
 
             conn.Close();
         }
