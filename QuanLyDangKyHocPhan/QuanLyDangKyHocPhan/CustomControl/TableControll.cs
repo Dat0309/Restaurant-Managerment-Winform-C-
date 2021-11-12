@@ -102,10 +102,13 @@ namespace QuanLyDangKyHocPhan.CustomControl
             {
                 try
                 {
-                    UpdateStatusTable(1);
-                    InsertBillsTable();
-                    btnValid.Visible = true;
-                    this.send(this.table, billID);
+                    if (send != null)
+                    {
+                        UpdateStatusTable(1);
+                        InsertBillsTable();
+                        btnValid.Visible = true;
+                        this.send(this.table, billID);
+                    }
                 }catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "SqlError");

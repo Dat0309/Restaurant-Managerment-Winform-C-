@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="QuanLyDangKyHocPhan.AccountForm" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAgBSAkwAsQACCABAACCAIBgIAAZAAAAAABAAI=</HashCode>
+      <FileName>AccountForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.AddCateForm" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAICAAABsAAACAAAACCAAAwIAAAIAAAAAACAI=</HashCode>
+      <FileName>AddCateForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.BillDetailForm" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACABAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BillDetailForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.BillForm" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAAAAADAAvAAEAACCACACIEAkAAAAiAQAIISIAAE=</HashCode>
+      <FileName>BillForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.BillOrderForm" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAACAAAAgAABCAAAACIAAAAAAAAAAAQgAIAQA=</HashCode>
+      <FileName>BillOrderForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.BillsMemoryForm" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAACAAAICAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BillsMemoryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.ChangePassForm" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAsAkACAAAICAAAAAAAAAAAAAAAACEA=</HashCode>
+      <FileName>ChangePassForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.FoodControlForm" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAQAJiAE8AsQAACAQEGiGAAAgIAAAAAAAAUAADY=</HashCode>
+      <FileName>FoodControlForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.FoodInfoForm" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQQCAAYQswBAKAIMIGAAAAAAABAAAQAAACAIA=</HashCode>
+      <FileName>FoodInfoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Form1" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgBASAJACGg/gkVABCSQDUCEMEhiIAAqETAIgqCAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.FrmTableBills" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACIAAAAgAEAAgCAAAAAAA=</HashCode>
+      <FileName>FrmTableBills.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Program" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.RoleForm" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACEAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RoleForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.TableForm" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAQgAAAACAAAQCAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>TableForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.TableInfoForm" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAABCAAAAsQAqCAAIICgACAgIAAJAAAAAAAASY=</HashCode>
+      <FileName>TableInfoForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.CustomControl.DetailFood" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAEAAAACAAQEAAAACAABACAAAAQAAQCAAAAAAAAAA=</HashCode>
+      <FileName>CustomControl\DetailFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.CustomControl.OrderControl" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMGBAFADACAAAAAACAQQACAAAAAEAAgAAAAAAAgAA=</HashCode>
+      <FileName>CustomControl\OrderControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.CustomControl.TableControll" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAADCAQABAAACAIBACAEAAAAARAQBAAAAAAAI=</HashCode>
+      <FileName>CustomControl\TableControll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Model.Bills" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAgAAAAAAAAAASABAAEAAAAAgAAAAAAAkA=</HashCode>
+      <FileName>Model\Bills.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Model.Food" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAigAAAAYAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Food.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Model.Tables" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Model\Tables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEoAAACCCAEAEAwKAAiJEAIZAQAAkgAEiQIAAAAAANA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuanLyDangKyHocPhan.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

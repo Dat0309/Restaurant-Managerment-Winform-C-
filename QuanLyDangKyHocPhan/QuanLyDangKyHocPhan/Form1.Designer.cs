@@ -49,6 +49,9 @@ namespace QuanLyDangKyHocPhan
             this.btnListTable = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
             this.pnNhanVien = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.ctmsNhanVien = new Guna.UI.WinForms.GunaContextMenuStrip();
+            this.tsmChangePass = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -67,18 +70,19 @@ namespace QuanLyDangKyHocPhan
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.btnXuatHoaDon = new Guna.UI.WinForms.GunaGradientButton();
             this.btnPay = new Guna.UI.WinForms.GunaGradientButton();
-            this.ctmsNhanVien = new Guna.UI.WinForms.GunaContextMenuStrip();
-            this.tsmChangePass = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.gunaGradient2Panel2.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
             this.pnNhanVien.SuspendLayout();
+            this.ctmsNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
             this.gunaPanel2.SuspendLayout();
             this.gunaLinePanel1.SuspendLayout();
-            this.ctmsNhanVien.SuspendLayout();
+            this.gunaGradient2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaDragControl1
@@ -137,9 +141,9 @@ namespace QuanLyDangKyHocPhan
             this.flpFoodList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flpFoodList.AutoScroll = true;
-            this.flpFoodList.Location = new System.Drawing.Point(218, 145);
+            this.flpFoodList.Location = new System.Drawing.Point(218, 196);
             this.flpFoodList.Name = "flpFoodList";
-            this.flpFoodList.Size = new System.Drawing.Size(596, 594);
+            this.flpFoodList.Size = new System.Drawing.Size(596, 543);
             this.flpFoodList.TabIndex = 6;
             // 
             // gunaGradient2Panel2
@@ -422,6 +426,37 @@ namespace QuanLyDangKyHocPhan
             this.pnNhanVien.Size = new System.Drawing.Size(167, 62);
             this.pnNhanVien.TabIndex = 8;
             // 
+            // ctmsNhanVien
+            // 
+            this.ctmsNhanVien.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ctmsNhanVien.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmChangePass,
+            this.tsmLogout});
+            this.ctmsNhanVien.Name = "ctmsNhanVien";
+            this.ctmsNhanVien.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.ctmsNhanVien.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.ctmsNhanVien.RenderStyle.ColorTable = null;
+            this.ctmsNhanVien.RenderStyle.RoundedEdges = true;
+            this.ctmsNhanVien.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.ctmsNhanVien.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ctmsNhanVien.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.ctmsNhanVien.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.ctmsNhanVien.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
+            this.ctmsNhanVien.Size = new System.Drawing.Size(168, 52);
+            // 
+            // tsmChangePass
+            // 
+            this.tsmChangePass.Name = "tsmChangePass";
+            this.tsmChangePass.Size = new System.Drawing.Size(167, 24);
+            this.tsmChangePass.Text = "Đổi mật khẩu";
+            this.tsmChangePass.Click += new System.EventHandler(this.tsmChangePass_Click);
+            // 
+            // tsmLogout
+            // 
+            this.tsmLogout.Name = "tsmLogout";
+            this.tsmLogout.Size = new System.Drawing.Size(167, 24);
+            this.tsmLogout.Text = "Đăng xuất";
+            // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
@@ -676,41 +711,57 @@ namespace QuanLyDangKyHocPhan
             this.btnPay.Text = "Thanh toán";
             this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
-            // ctmsNhanVien
+            // gunaGradient2Panel1
             // 
-            this.ctmsNhanVien.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ctmsNhanVien.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmChangePass,
-            this.tsmLogout});
-            this.ctmsNhanVien.Name = "ctmsNhanVien";
-            this.ctmsNhanVien.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.ctmsNhanVien.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.ctmsNhanVien.RenderStyle.ColorTable = null;
-            this.ctmsNhanVien.RenderStyle.RoundedEdges = true;
-            this.ctmsNhanVien.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.ctmsNhanVien.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.ctmsNhanVien.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.ctmsNhanVien.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.ctmsNhanVien.RenderStyle.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.SystemDefault;
-            this.ctmsNhanVien.Size = new System.Drawing.Size(211, 80);
+            this.gunaGradient2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaGradient2Panel1.Controls.Add(this.gunaLabel3);
+            this.gunaGradient2Panel1.GradientColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.gunaGradient2Panel1.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.gunaGradient2Panel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.gunaGradient2Panel1.Location = new System.Drawing.Point(239, 148);
+            this.gunaGradient2Panel1.Name = "gunaGradient2Panel1";
+            this.gunaGradient2Panel1.Radius = 5;
+            this.gunaGradient2Panel1.Size = new System.Drawing.Size(127, 42);
+            this.gunaGradient2Panel1.TabIndex = 15;
             // 
-            // tsmChangePass
+            // gunaLabel3
             // 
-            this.tsmChangePass.Name = "tsmChangePass";
-            this.tsmChangePass.Size = new System.Drawing.Size(210, 24);
-            this.tsmChangePass.Text = "Đổi mật khẩu";
-            this.tsmChangePass.Click += new System.EventHandler(this.tsmChangePass_Click);
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel3.Location = new System.Drawing.Point(10, 5);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(113, 32);
+            this.gunaLabel3.TabIndex = 1;
+            this.gunaLabel3.Text = "Tìm kiếm";
+            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tsmLogout
+            // txtSearch
             // 
-            this.tsmLogout.Name = "tsmLogout";
-            this.tsmLogout.Size = new System.Drawing.Size(210, 24);
-            this.tsmLogout.Text = "Đăng xuất";
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BaseColor = System.Drawing.Color.White;
+            this.txtSearch.BorderColor = System.Drawing.Color.Silver;
+            this.txtSearch.BorderSize = 1;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Location = new System.Drawing.Point(382, 153);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.Radius = 3;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(432, 32);
+            this.txtSearch.TabIndex = 16;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 753);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.gunaGradient2Panel1);
             this.Controls.Add(this.btnXuatHoaDon);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.btnPay);
@@ -733,11 +784,13 @@ namespace QuanLyDangKyHocPhan
             this.gunaShadowPanel1.PerformLayout();
             this.pnNhanVien.ResumeLayout(false);
             this.pnNhanVien.PerformLayout();
+            this.ctmsNhanVien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaLinePanel1.ResumeLayout(false);
             this.gunaLinePanel1.PerformLayout();
-            this.ctmsNhanVien.ResumeLayout(false);
+            this.gunaGradient2Panel1.ResumeLayout(false);
+            this.gunaGradient2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -783,6 +836,9 @@ namespace QuanLyDangKyHocPhan
         private Guna.UI.WinForms.GunaContextMenuStrip ctmsNhanVien;
         private System.Windows.Forms.ToolStripMenuItem tsmChangePass;
         private System.Windows.Forms.ToolStripMenuItem tsmLogout;
+        private Guna.UI.WinForms.GunaTextBox txtSearch;
+        private Guna.UI.WinForms.GunaGradient2Panel gunaGradient2Panel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
     }
 }
 

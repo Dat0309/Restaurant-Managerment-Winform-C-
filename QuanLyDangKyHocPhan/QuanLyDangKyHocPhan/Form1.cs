@@ -298,6 +298,43 @@ namespace QuanLyDangKyHocPhan
 
         }
 
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string search = "";
+            if(txtSearch.Text == "")
+            {
+                search = "";
+            }
+            else
+            {
+                search = " WHERE Name like '%" + txtSearch.Text + "%'";
+            }
+
+            List<Food> foods = new List<Food>();
+            flpFoodList.Controls.Clear();
+            string connString = "server=WINDOWS-11\\SQLEXPRESS; database = RestaurantManagement; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connString);
+            SqlCommand cmd = conn.CreateCommand();
+
+            cmd.CommandText = "SELECT * FROM Food" + search;
+            conn.Open();
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var food = new Food((int)reader["ID"], (string)reader["Name"], (string)reader["Unit"], (int)reader["FoodCategoryID"],
+                    (int)reader["Price"], (string)reader["Notes"], (string)reader["Picture"]);
+                foods.Add(food);
+
+                var item = new CustomControl.DetailFood(SetFood);
+                item.LoadFood((string)reader["Name"], (int)reader["Price"], (string)reader["Picture"], food);
+
+                flpFoodList.Controls.Add(item);
+            }
+
+            conn.Close();
+        }
+
         private void frmClosed(object sender, FormClosedEventArgs e)
         {
             btnListTable_Click(sender, e);
