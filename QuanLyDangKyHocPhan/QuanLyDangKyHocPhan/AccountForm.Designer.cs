@@ -200,6 +200,7 @@
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(350, 32);
             this.txtPass.TabIndex = 9;
+            this.txtPass.Text = "123456";
             // 
             // txtFullName
             // 
